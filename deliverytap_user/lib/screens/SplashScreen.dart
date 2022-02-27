@@ -3,6 +3,7 @@ import 'package:deliverytap_user/main.dart';
 import 'package:deliverytap_user/services/AuthService.dart';
 import 'package:deliverytap_user/utils/Colors.dart';
 import 'package:deliverytap_user/utils/Constants.dart';
+import 'package:deliverytap_user/screens/LoginScreen.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -20,6 +21,8 @@ class SplashScreenState extends State<SplashScreen> {
   }
 
   Future<void> init() async {
+    await 2.seconds.delay;
+    LoginScreen().launch(context, isNewTask: true);
     }
 
   @override
@@ -35,7 +38,7 @@ class SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: appStore.isDarkMode ? scaffoldSecondaryDark : colorPrimary,
+      backgroundColor: scaffoldSecondaryDark,
       body: Container(
         child: Text(mAppName, style: primaryTextStyle(size: 36, color: Colors.white)),
       ).center(),

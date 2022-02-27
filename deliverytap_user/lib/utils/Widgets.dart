@@ -1,0 +1,21 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_vector_icons/flutter_vector_icons.dart';
+import 'package:deliverytap_user/utils/Colors.dart';
+import 'package:nb_utils/nb_utils.dart';
+
+import '../main.dart';
+
+InputDecoration inputDecoration({String? labelText}) {
+  return InputDecoration(
+    border: OutlineInputBorder(borderSide: BorderSide(color: Colors.grey), borderRadius: radius() as BorderRadius),
+    enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.grey), borderRadius: radius() as BorderRadius),
+    focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: colorPrimary), borderRadius: radius() as BorderRadius),
+    errorBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.red), borderRadius: radius() as BorderRadius),
+    focusedErrorBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.red), borderRadius: radius() as BorderRadius),
+    labelText: labelText,
+    labelStyle: primaryTextStyle(),
+    contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+    alignLabelWithHint: true,
+  );
+}
