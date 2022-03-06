@@ -8,6 +8,7 @@ import 'package:deliverytap_user/utils/Widgets.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../main.dart';
+import 'DashboardScreen.dart';
 
 class RegisterScreen extends StatefulWidget {
   static String tag = '/RegisterScreen';
@@ -39,9 +40,9 @@ class RegisterScreenState extends State<RegisterScreen> {
   }
 
   Future<void> init() async {
-    setStatusBarColor(appStore.isDarkMode ? scaffoldColorDark : Colors.white);
+    setStatusBarColor(scaffoldColorDark);
 
-    saveOneSignalPlayerId();
+    //saveOneSignalPlayerId();
   }
 
   Future<void> signUp() async {
@@ -56,6 +57,7 @@ class RegisterScreenState extends State<RegisterScreen> {
 
       await signUpWithEmail(nameController.text.trim(), emailController.text.trim(), passwordController.text.trim(), phoneController.text).then((value) {
         appStore.setLoading(false);
+        DashboardScreen().launch(context, isNewTask: true);
       }).catchError((e) {
         toast(e.toString());
 
@@ -184,7 +186,7 @@ class RegisterScreenState extends State<RegisterScreen> {
         ),
       ),
       bottomSheet: Container(
-        color: appStore.isDarkMode ? scaffoldColorDark : Colors.white,
+        color: scaffoldColorDark,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [

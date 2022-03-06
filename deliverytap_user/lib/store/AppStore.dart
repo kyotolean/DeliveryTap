@@ -19,9 +19,6 @@ abstract class _AppStore with Store {
   bool isNotificationOn = true;
 
   @observable
-  bool isDarkMode = false;
-
-  @observable
   bool isAdmin = false;
 
   @observable

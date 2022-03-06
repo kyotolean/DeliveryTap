@@ -12,7 +12,7 @@ class CommonKeys {
   static String review = 'review';
   static String rating = 'rating';
   static String reviewTags = 'reviewTags';
-  static String restaurantId = 'restaurantId';
+  static String storeId = 'storeId';
 }
 
 class UserKeys {
@@ -37,4 +37,32 @@ class AddressKeys {
   static String address = 'address';
   static String details = 'details';
   static String userLocation = 'userLocation';
+}
+
+class CategoryKeys {
+  static String color = 'color';
+}
+
+class StoreKeys {
+  static String storeName = 'storeName';
+  static String photoUrl = 'photoUrl';
+  static String openTime = 'openTime';
+  static String closeTime = 'closeTime';
+  static String storeAddress = 'storeAddress';
+  static String storeContact = 'storeContact';
+  static String isDealOfTheDay = 'isDealOfTheDay';
+  static String couponCode = 'couponCode';
+  static String couponDesc = 'couponDesc';
+  static String caseSearch = 'caseSearch';
+  static String storeDesc = 'storeDesc';
+  static String catList = 'catList';
+  static String storeCity = 'storeCity';
+  static String deliveryCharge = 'deliveryCharge';
+}
+
+class StoreReviewKeys {
+  static String reviewerId = 'reviewerId';
+  static String reviewerName = 'reviewerName';
+  static String reviewerImage = 'reviewerImage';
+  static String reviewerLocation = 'reviewerLocation';
 }

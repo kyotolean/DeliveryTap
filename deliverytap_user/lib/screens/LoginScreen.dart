@@ -10,6 +10,7 @@ import 'package:nb_utils/nb_utils.dart';
 
 import '../main.dart';
 import 'RegisterScreen.dart';
+import 'DashboardScreen.dart';
 
 class LoginScreen extends StatefulWidget {
   static String tag = '/LoginScreen';
@@ -36,7 +37,7 @@ class LoginScreenState extends State<LoginScreen> {
   Future<void> init() async {
     setStatusBarColor(Colors.transparent, statusBarIconBrightness: Brightness.light);
 
-    if (getStringAsync(PLAYER_ID).isEmpty) saveOneSignalPlayerId();
+    //if (getStringAsync(PLAYER_ID).isEmpty) saveOneSignalPlayerId();
   }
 
   Future<void> loginWithEmail() async {
@@ -48,7 +49,9 @@ class LoginScreenState extends State<LoginScreen> {
     if (formKey.currentState!.validate()) {
       appStore.setLoading(true);
 
-      await signInWithEmail(email: emailController.text, password: passwordController.text).catchError((e) {
+      await signInWithEmail(email: emailController.text, password: passwordController.text).then((value) {
+        DashboardScreen().launch(context, isNewTask: true);
+      }).catchError((e) {
         toast(e.toString());
       });
 
@@ -65,7 +68,7 @@ class LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: appStore.isDarkMode ? scaffoldColorDark : Colors.white,
+      backgroundColor:scaffoldColorDark,
       body: Stack(
         children: [
           SingleChildScrollView(
@@ -140,7 +143,7 @@ class LoginScreenState extends State<LoginScreen> {
         ],
       ),
       bottomSheet: Container(
-        color: appStore.isDarkMode ? scaffoldColorDark : Colors.white,
+        color: scaffoldColorDark,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [

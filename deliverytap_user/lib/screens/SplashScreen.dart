@@ -4,6 +4,7 @@ import 'package:deliverytap_user/services/AuthService.dart';
 import 'package:deliverytap_user/utils/Colors.dart';
 import 'package:deliverytap_user/utils/Constants.dart';
 import 'package:deliverytap_user/screens/LoginScreen.dart';
+import 'package:deliverytap_user/screens/DashboardScreen.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -22,7 +23,17 @@ class SplashScreenState extends State<SplashScreen> {
 
   Future<void> init() async {
     await 2.seconds.delay;
-    LoginScreen().launch(context, isNewTask: true);
+    setStatusBarColor(
+      scaffoldColorDark,
+      statusBarIconBrightness: Brightness.light,
+    );
+
+    if (appStore.isLoggedIn) {
+
+      DashboardScreen().launch(context, isNewTask: true);
+    } else {
+      LoginScreen().launch(context, isNewTask: true);
+    }
     }
 
   @override

@@ -23,7 +23,7 @@ dependencies:
   firebase_auth: ^3.3.4
   cloud_firestore: ^3.1.5
   firebase_analytics: ^9.0.4
-  firebase_remote_config: ^1.0.3
+  firebase_remote_config: ^2.0.2
   firebase_storage: ^10.2.4
 
   # CONNECTIVITY
@@ -54,7 +54,7 @@ dependencies:
   google_sign_in: ^5.2.1
 
   # PUSH NOTIFICATION
-  onesignal_flutter: 3.2.7
+  onesignal_flutter: ^3.2.8
 
   # IMAGES
   image_picker: ^0.8.4+4
@@ -76,4 +76,7 @@ dev_dependencies:
 flutter:
 
   uses-material-design: true
+
+  assets:
+    - assets/placeholder.jpg
 

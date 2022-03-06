@@ -6,21 +6,30 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:deliverytap_user/services/UserDBService.dart';
+import 'package:deliverytap_user/services/CategoryDBService.dart';
+import 'package:deliverytap_user/services/StoreDBService.dart';
 import 'package:deliverytap_user/utils/Constants.dart';
 import 'package:deliverytap_user/utils/Common.dart';
 import 'package:deliverytap_user/utils/Colors.dart';
 import 'package:deliverytap_user/store/AppStore.dart';
-import 'package:deliverytap_user/screens/SplashScreen.dart';
-
 import 'package:nb_utils/nb_utils.dart';
 import 'package:onesignal_flutter/onesignal_flutter.dart';
+
+import 'screens/SplashScreen.dart';
+import 'utils/Common.dart';
+import 'AppTheme.dart';
 
 FirebaseFirestore db = FirebaseFirestore.instance;
 FirebaseAuth auth = FirebaseAuth.instance;
 
 UserDBService userDBService = UserDBService();
+CategoryDBService categoryDBService = CategoryDBService();
+StoreDBService storeDBService = StoreDBService();
 
 AppStore appStore = AppStore();
+
+String? storeName = '';
+String? storeId = '';
 
 String userAddressGlobal = '';
 String? userCityNameGlobal = '';
@@ -38,6 +47,7 @@ Future<void> initMethod() async {
 
   if (isMobile) {
     await Firebase.initializeApp();
+    await initialize();
 
     await OneSignal.shared.setAppId(mOneSignalAppId);
 
@@ -70,7 +80,8 @@ class MyApp extends StatelessWidget {
       builder: (_) => MaterialApp(
         title: mAppName,
         debugShowCheckedModeBanner: false,
-        localeResolutionCallback: (locale, supportedLocales) => locale,
+        navigatorKey: navigatorKey,
+        theme: AppTheme.theme,
         home: SplashScreen(),
         builder: scrollBehaviour(),
       ),
