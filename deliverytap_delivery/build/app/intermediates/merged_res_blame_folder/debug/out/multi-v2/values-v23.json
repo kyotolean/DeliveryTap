@@ -1,0 +1,57 @@
+{
+    "logs": [
+        {
+            "outputFile": "E:\\IT-Step\\project\\1\\DeliveryTap-main\\deliverytap_delivery\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Legion\\.gradle\\caches\\transforms-2\\files-2.1\\8eaf89a15e03c4a0b61cb75405393ff1\\appcompat-1.0.0\\res\\values-v23\\values-v23.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,19,32,33,34,35,36",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,190,325,400,487,1277,2079,2206,2311,2426,2533",
+                        "endLines": "2,3,4,5,18,31,32,33,34,35,36",
+                        "endColumns": "134,134,74,86,12,12,126,104,114,106,112",
+                        "endOffsets": "185,320,395,482,1272,2074,2201,2306,2421,2528,2641"
+                    },
+                    "to": {
+                        "startLines": "4,5,6,7,8,21,34,35,36,37,38",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "184,319,454,529,616,1406,2208,2335,2440,2555,2662",
+                        "endLines": "4,5,6,7,20,33,34,35,36,37,38",
+                        "endColumns": "134,134,74,86,12,12,126,104,114,106,112",
+                        "endOffsets": "314,449,524,611,1401,2203,2330,2435,2550,2657,2770"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Legion\\.gradle\\caches\\transforms-2\\files-2.1\\7dbe88f7b6e9827bdd9ac54c043689c6\\work-runtime-2.7.1\\res\\values-v23\\values-v23.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,121",
+                        "endColumns": "65,62",
+                        "endOffsets": "116,179"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Legion\\.gradle\\caches\\transforms-2\\files-2.1\\933a9e362967939ae202a5413d6d24d1\\cardview-1.0.0\\res\\values-v23\\values-v23.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "200"
+                    },
+                    "to": {
+                        "startLines": "39",
+                        "startColumns": "4",
+                        "startOffsets": "2775",
+                        "endLines": "41",
+                        "endColumns": "12",
+                        "endOffsets": "2920"
+                    }
+                }
+            ]
+        }
+    ]
+}

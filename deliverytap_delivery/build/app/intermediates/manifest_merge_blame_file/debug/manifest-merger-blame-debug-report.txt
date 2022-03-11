@@ -1,0 +1,899 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.tapforce.deliverytap_delivery"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="31" />
+10    <!--
+11         Flutter needs it to communicate with the running application
+12         to allow setting breakpoints, to provide hot reload, etc.
+13    -->
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\android\app\src\debug\AndroidManifest.xml:6:5-66
+14-->E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\android\app\src\debug\AndroidManifest.xml:6:22-64
+15    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+15-->[:geolocator_android] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\geolocator_android\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-77
+15-->[:geolocator_android] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\geolocator_android\intermediates\library_manifest\debug\AndroidManifest.xml:7:22-74
+16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+16-->[:connectivity_plus] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\connectivity_plus\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-79
+16-->[:connectivity_plus] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\connectivity_plus\intermediates\library_manifest\debug\AndroidManifest.xml:7:22-76
+17    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+17-->[:background_location] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\background_location\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-81
+17-->[:background_location] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\background_location\intermediates\library_manifest\debug\AndroidManifest.xml:7:22-78
+18    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Create a unique permission for your app and use it so only your app can receive your OneSignal messages. -->
+18-->[:background_location] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\background_location\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-79
+18-->[:background_location] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\background_location\intermediates\library_manifest\debug\AndroidManifest.xml:8:22-76
+19    <permission
+19-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:7:5-9:47
+20        android:name="com.tapforce.deliverytap_delivery.permission.C2D_MESSAGE"
+20-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:8:9-63
+21        android:protectionLevel="signature" />
+21-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:9:9-44
+22
+23    <uses-permission android:name="com.tapforce.deliverytap_delivery.permission.C2D_MESSAGE" /> <!-- c2dm RECEIVE are basic requirements for push messages through Google's FCM -->
+23-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:11:5-79
+23-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:11:22-76
+24    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" /> <!-- Required, makes sure notifications are delivered on time. -->
+24-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:17:5-82
+24-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:17:22-79
+25    <uses-permission android:name="android.permission.WAKE_LOCK" />
+25-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:18:5-68
+25-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:18:22-65
+26    <!--
+27 Required so the device vibrates on receiving a push notification.
+28         Vibration settings of the device still apply.
+29    -->
+30    <uses-permission android:name="android.permission.VIBRATE" />
+30-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:23:5-66
+30-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:23:22-63
+31    <!--
+32 Use to restore notifications the user hasn't interacted with.
+33         They could be missed notifications if the user reboots their device if this isn't in place.
+34    -->
+35    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- START: ShortcutBadger -->
+35-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:29:5-81
+35-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:29:22-78
+36    <!-- Samsung -->
+37    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+37-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:31:5-86
+37-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:31:22-83
+38    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" /> <!-- HTC -->
+38-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:32:5-87
+38-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:32:22-84
+39    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+39-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:33:5-81
+39-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:33:22-78
+40    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" /> <!-- Sony -->
+40-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:34:5-83
+40-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:34:22-80
+41    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+41-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:35:5-88
+41-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:35:22-85
+42    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE" /> <!-- Apex -->
+42-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:36:5-92
+42-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:36:22-89
+43    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" /> <!-- Solid -->
+43-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:37:5-84
+43-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:37:22-81
+44    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" /> <!-- Huawei -->
+44-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:38:5-83
+44-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:38:22-80
+45    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+45-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:39:5-91
+45-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:39:22-88
+46    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
+46-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:40:5-92
+46-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:40:22-89
+47    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" /> <!-- ZUK -->
+47-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:41:5-93
+47-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:41:22-90
+48    <uses-permission android:name="android.permission.READ_APP_BADGE" /> <!-- OPPO -->
+48-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:42:5-73
+48-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:42:22-70
+49    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS" />
+49-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:43:5-82
+49-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:43:22-79
+50    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS" /> <!-- EvMe -->
+50-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:44:5-83
+50-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:44:22-80
+51    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ" />
+51-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:45:5-88
+51-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:45:22-85
+52    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE" />
+52-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:46:5-89
+52-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:46:22-86
+53
+54    <uses-feature
+54-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\071f32299edee94b84cbdef97955621b\jetified-play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
+55        android:glEsVersion="0x00020000"
+55-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\071f32299edee94b84cbdef97955621b\jetified-play-services-maps-17.0.0\AndroidManifest.xml:27:9-41
+56        android:required="true" />
+56-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\071f32299edee94b84cbdef97955621b\jetified-play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
+57
+58    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> <!-- Include required permissions for Advertising Id -->
+58-->[com.google.android.gms:play-services-measurement:20.1.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\03391d50a256ac963c05cf67bfc528a4\jetified-play-services-measurement-20.1.0\AndroidManifest.xml:26:5-110
+58-->[com.google.android.gms:play-services-measurement:20.1.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\03391d50a256ac963c05cf67bfc528a4\jetified-play-services-measurement-20.1.0\AndroidManifest.xml:26:22-107
+59    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+59-->[com.google.android.gms:play-services-ads-identifier:18.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a43530664da0f7ba7bc0bf4fca47495b\jetified-play-services-ads-identifier-18.0.0\AndroidManifest.xml:23:5-79
+59-->[com.google.android.gms:play-services-ads-identifier:18.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a43530664da0f7ba7bc0bf4fca47495b\jetified-play-services-ads-identifier-18.0.0\AndroidManifest.xml:23:22-76
+60
+61    <application
+62        android:name="android.app.Application"
+63        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+63-->[androidx.core:core:1.6.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\14b93615368c2249f1830e26ca064ab5\core-1.6.0\AndroidManifest.xml:24:18-86
+64        android:debuggable="true"
+65        android:icon="@mipmap/ic_launcher"
+66        android:label="deliverytap_delivery" >
+67        <activity
+68            android:name="com.tapforce.deliverytap_delivery.MainActivity"
+69            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+70            android:exported="true"
+71            android:hardwareAccelerated="true"
+72            android:launchMode="singleTop"
+73            android:theme="@style/LaunchTheme"
+74            android:windowSoftInputMode="adjustResize" >
+75
+76            <!--
+77                 Specifies an Android theme to apply to this Activity as soon as
+78                 the Android process has started. This theme is visible to the user
+79                 while the Flutter UI initializes. After that, this theme continues
+80                 to determine the Window background behind the Flutter UI.
+81            -->
+82            <meta-data
+83                android:name="io.flutter.embedding.android.NormalTheme"
+84                android:resource="@style/NormalTheme" />
+85
+86            <intent-filter>
+87                <action android:name="android.intent.action.MAIN" />
+88
+89                <category android:name="android.intent.category.LAUNCHER" />
+90            </intent-filter>
+91        </activity>
+92        <!--
+93             Don't delete the meta-data below.
+94             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+95        -->
+96        <meta-data
+97            android:name="flutterEmbedding"
+98            android:value="2" />
+99
+100        <service
+100-->[:cloud_firestore] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
+101            android:name="com.google.firebase.components.ComponentDiscoveryService"
+101-->[:cloud_firestore] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:8:18-89
+102            android:directBootAware="true"
+102-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\e9bee4f77b660f6ff89d0b5e41260363\jetified-firebase-common-20.0.0\AndroidManifest.xml:35:13-43
+103            android:exported="false" >
+103-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\98564530026934e5d622580df22e15ca\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:51:13-37
+104            <meta-data
+104-->[:cloud_firestore] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+105                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
+105-->[:cloud_firestore] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-134
+106                android:value="com.google.firebase.components.ComponentRegistrar" />
+106-->[:cloud_firestore] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+107            <meta-data
+107-->[:firebase_auth] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+108                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
+108-->[:firebase_auth] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-124
+109                android:value="com.google.firebase.components.ComponentRegistrar" />
+109-->[:firebase_auth] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+110            <meta-data
+110-->[:firebase_core] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+111                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+111-->[:firebase_core] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-124
+112                android:value="com.google.firebase.components.ComponentRegistrar" />
+112-->[:firebase_core] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+113            <meta-data
+113-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\98564530026934e5d622580df22e15ca\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:52:13-54:85
+114                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+114-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\98564530026934e5d622580df22e15ca\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:53:17-119
+115                android:value="com.google.firebase.components.ComponentRegistrar" />
+115-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\98564530026934e5d622580df22e15ca\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:54:17-82
+116            <meta-data
+116-->[com.google.firebase:firebase-datatransport:18.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\c8c0c96d6d3687660a8f2107d6b37fa1\jetified-firebase-datatransport-18.0.0\AndroidManifest.xml:28:13-30:85
+117                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+117-->[com.google.firebase:firebase-datatransport:18.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\c8c0c96d6d3687660a8f2107d6b37fa1\jetified-firebase-datatransport-18.0.0\AndroidManifest.xml:29:17-115
+118                android:value="com.google.firebase.components.ComponentRegistrar" />
+118-->[com.google.firebase:firebase-datatransport:18.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\c8c0c96d6d3687660a8f2107d6b37fa1\jetified-firebase-datatransport-18.0.0\AndroidManifest.xml:30:17-82
+119            <meta-data
+119-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:77:13-79:85
+120                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+120-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:78:17-109
+121                android:value="com.google.firebase.components.ComponentRegistrar" />
+121-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:79:17-82
+122            <meta-data
+122-->[com.google.firebase:firebase-firestore:24.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\b795ec276a2440e5d3c718ecabc4c7d2\jetified-firebase-firestore-24.0.1\AndroidManifest.xml:20:13-22:85
+123                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+123-->[com.google.firebase:firebase-firestore:24.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\b795ec276a2440e5d3c718ecabc4c7d2\jetified-firebase-firestore-24.0.1\AndroidManifest.xml:21:17-111
+124                android:value="com.google.firebase.components.ComponentRegistrar" />
+124-->[com.google.firebase:firebase-firestore:24.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\b795ec276a2440e5d3c718ecabc4c7d2\jetified-firebase-firestore-24.0.1\AndroidManifest.xml:22:17-82
+125            <meta-data
+125-->[com.google.android.gms:play-services-measurement-api:20.1.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\f0e8c4af6bafde84973cda4466a1e679\jetified-play-services-measurement-api-20.1.0\AndroidManifest.xml:30:13-32:85
+126                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+126-->[com.google.android.gms:play-services-measurement-api:20.1.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\f0e8c4af6bafde84973cda4466a1e679\jetified-play-services-measurement-api-20.1.0\AndroidManifest.xml:31:17-139
+127                android:value="com.google.firebase.components.ComponentRegistrar" />
+127-->[com.google.android.gms:play-services-measurement-api:20.1.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\f0e8c4af6bafde84973cda4466a1e679\jetified-play-services-measurement-api-20.1.0\AndroidManifest.xml:32:17-82
+128            <meta-data
+128-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\544bb83cdfcc0c9ba48353730451aa98\jetified-firebase-installations-17.0.0\AndroidManifest.xml:18:13-20:85
+129                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+129-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\544bb83cdfcc0c9ba48353730451aa98\jetified-firebase-installations-17.0.0\AndroidManifest.xml:19:17-127
+130                android:value="com.google.firebase.components.ComponentRegistrar" />
+130-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\544bb83cdfcc0c9ba48353730451aa98\jetified-firebase-installations-17.0.0\AndroidManifest.xml:20:17-82
+131        </service>
+132        <service
+132-->[:geolocator_android] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\geolocator_android\intermediates\library_manifest\debug\AndroidManifest.xml:10:9-14:56
+133            android:name="com.baseflow.geolocator.GeolocatorLocationService"
+133-->[:geolocator_android] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\geolocator_android\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-77
+134            android:enabled="true"
+134-->[:geolocator_android] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\geolocator_android\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-35
+135            android:exported="false"
+135-->[:geolocator_android] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\geolocator_android\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-37
+136            android:foregroundServiceType="location" />
+136-->[:geolocator_android] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\geolocator_android\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-53
+137
+138        <activity
+138-->[:url_launcher_android] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\url_launcher_android\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-11:74
+139            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+139-->[:url_launcher_android] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\url_launcher_android\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-74
+140            android:exported="false"
+140-->[:url_launcher_android] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\url_launcher_android\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-37
+141            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+141-->[:url_launcher_android] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\url_launcher_android\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-71
+142
+143        <service
+143-->[:background_location] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\background_location\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-17:37
+144            android:name="com.almoullim.background_location.LocationUpdatesService"
+144-->[:background_location] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\background_location\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-84
+145            android:enabled="true"
+145-->[:background_location] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\background_location\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-35
+146            android:exported="true"
+146-->[:background_location] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\background_location\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-36
+147            android:foregroundServiceType="location"
+147-->[:background_location] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\background_location\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-53
+148            android:permission="" />
+148-->[:background_location] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\background_location\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-34
+149
+150        <provider
+150-->[:share] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\share\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-16:20
+151            android:name="io.flutter.plugins.share.ShareFileProvider"
+151-->[:share] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\share\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-70
+152            android:authorities="com.tapforce.deliverytap_delivery.flutter.share_provider"
+152-->[:share] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\share\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-74
+153            android:exported="false"
+153-->[:share] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\share\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-37
+154            android:grantUriPermissions="true" >
+154-->[:share] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\share\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-47
+155            <meta-data
+155-->[:share] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\share\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-15:68
+156                android:name="android.support.FILE_PROVIDER_PATHS"
+156-->[:share] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\share\intermediates\library_manifest\debug\AndroidManifest.xml:14:17-67
+157                android:resource="@xml/flutter_share_file_paths" />
+157-->[:share] E:\IT-Step\project\1\DeliveryTap-main\deliverytap_delivery\build\share\intermediates\library_manifest\debug\AndroidManifest.xml:15:17-65
+158        </provider>
+159
+160        <receiver
+160-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:49:9-60:20
+161            android:name="com.onesignal.FCMBroadcastReceiver"
+161-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:50:13-62
+162            android:exported="true"
+162-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:51:13-36
+163            android:permission="com.google.android.c2dm.permission.SEND" >
+163-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:52:13-73
+164
+165            <!-- High priority so OneSignal payloads can be filtered from other FCM receivers -->
+166            <intent-filter android:priority="999" >
+166-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:55:13-59:29
+166-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:55:28-50
+167                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+167-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:56:17-81
+167-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:56:25-78
+168
+169                <category android:name="com.tapforce.deliverytap_delivery" />
+169-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:58:17-61
+169-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:58:27-58
+170            </intent-filter>
+171        </receiver>
+172
+173        <service
+173-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:62:9-68:19
+174            android:name="com.onesignal.HmsMessageServiceOneSignal"
+174-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:63:13-68
+175            android:exported="false" >
+175-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:64:13-37
+176            <intent-filter>
+176-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:65:13-67:29
+177                <action android:name="com.huawei.push.action.MESSAGING_EVENT" />
+177-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:66:17-81
+177-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:66:25-78
+178            </intent-filter>
+179        </service>
+180
+181        <activity
+181-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:70:9-78:20
+182            android:name="com.onesignal.NotificationOpenedActivityHMS"
+182-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:71:13-71
+183            android:exported="true"
+183-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:72:13-36
+184            android:noHistory="true"
+184-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:73:13-37
+185            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+185-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:74:13-72
+186            <intent-filter>
+186-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:75:13-77:29
+187                <action android:name="android.intent.action.VIEW" />
+187-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:76:17-69
+187-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:76:25-66
+188            </intent-filter>
+189        </activity>
+190
+191        <service
+191-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:80:9-82:40
+192            android:name="com.onesignal.FCMIntentService"
+192-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:81:13-58
+193            android:exported="false" />
+193-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:82:13-37
+194        <service
+194-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:83:9-86:72
+195            android:name="com.onesignal.FCMIntentJobService"
+195-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:84:13-61
+196            android:exported="false"
+196-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:85:13-37
+197            android:permission="android.permission.BIND_JOB_SERVICE" />
+197-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:86:13-69
+198        <service
+198-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:87:9-90:43
+199            android:name="com.onesignal.SyncService"
+199-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:88:13-53
+200            android:exported="false"
+200-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:89:13-37
+201            android:stopWithTask="true" />
+201-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:90:13-40
+202        <service
+202-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:91:9-94:72
+203            android:name="com.onesignal.SyncJobService"
+203-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:92:13-56
+204            android:exported="false"
+204-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:93:13-37
+205            android:permission="android.permission.BIND_JOB_SERVICE" />
+205-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:94:13-69
+206
+207        <activity
+207-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:96:9-99:75
+208            android:name="com.onesignal.PermissionsActivity"
+208-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:97:13-61
+209            android:exported="false"
+209-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:98:13-37
+210            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+210-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:99:13-72
+211
+212        <receiver
+212-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:101:9-103:39
+213            android:name="com.onesignal.NotificationDismissReceiver"
+213-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:102:13-69
+214            android:exported="true" />
+214-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:103:13-36
+215        <receiver
+215-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:104:9-111:20
+216            android:name="com.onesignal.BootUpReceiver"
+216-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:105:13-56
+217            android:exported="true" >
+217-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:106:13-36
+218            <intent-filter>
+218-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:107:13-110:29
+219                <action android:name="android.intent.action.BOOT_COMPLETED" />
+219-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:108:17-79
+219-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:108:25-76
+220                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+220-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:109:17-82
+220-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:109:25-79
+221            </intent-filter>
+222        </receiver>
+223        <receiver
+223-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:112:9-118:20
+224            android:name="com.onesignal.UpgradeReceiver"
+224-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:113:13-57
+225            android:exported="true" >
+225-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:114:13-36
+226            <intent-filter>
+226-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:115:13-117:29
+227                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+227-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:116:17-84
+227-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:116:25-81
+228            </intent-filter>
+229        </receiver>
+230
+231        <activity
+231-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:120:9-126:75
+232            android:name="com.onesignal.NotificationOpenedReceiver"
+232-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:121:13-68
+233            android:excludeFromRecents="true"
+233-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:122:13-46
+234            android:exported="true"
+234-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:123:13-36
+235            android:noHistory="true"
+235-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:124:13-37
+236            android:taskAffinity=""
+236-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:125:13-36
+237            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+237-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:126:13-72
+238        <activity
+238-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:127:9-132:75
+239            android:name="com.onesignal.NotificationOpenedReceiverAndroid22AndOlder"
+239-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:128:13-85
+240            android:excludeFromRecents="true"
+240-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:129:13-46
+241            android:exported="true"
+241-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:130:13-36
+242            android:noHistory="true"
+242-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:131:13-37
+243            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+243-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:132:13-72
+244
+245        <uses-library
+245-->[androidx.window:window:1.0.0-beta04] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\cea45e25bbe77c9713c39e234ccfd7bd\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+246            android:name="androidx.window.extensions"
+246-->[androidx.window:window:1.0.0-beta04] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\cea45e25bbe77c9713c39e234ccfd7bd\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+247            android:required="false" />
+247-->[androidx.window:window:1.0.0-beta04] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\cea45e25bbe77c9713c39e234ccfd7bd\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+248        <uses-library
+248-->[androidx.window:window:1.0.0-beta04] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\cea45e25bbe77c9713c39e234ccfd7bd\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+249            android:name="androidx.window.sidecar"
+249-->[androidx.window:window:1.0.0-beta04] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\cea45e25bbe77c9713c39e234ccfd7bd\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+250            android:required="false" />
+250-->[androidx.window:window:1.0.0-beta04] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\cea45e25bbe77c9713c39e234ccfd7bd\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+251
+252        <receiver
+252-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\98564530026934e5d622580df22e15ca\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:28:9-35:20
+253            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+253-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\98564530026934e5d622580df22e15ca\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:29:13-78
+254            android:exported="true"
+254-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\98564530026934e5d622580df22e15ca\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:30:13-36
+255            android:permission="com.google.android.c2dm.permission.SEND" >
+255-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\98564530026934e5d622580df22e15ca\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:31:13-73
+256            <intent-filter>
+256-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\98564530026934e5d622580df22e15ca\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:32:13-34:29
+257                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+257-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:56:17-81
+257-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:56:25-78
+258            </intent-filter>
+259        </receiver>
+260        <!--
+261             FirebaseMessagingService performs security checks at runtime,
+262             but set to not exported to explicitly avoid allowing another app to call it.
+263        -->
+264        <service
+264-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\98564530026934e5d622580df22e15ca\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:41:9-48:19
+265            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+265-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\98564530026934e5d622580df22e15ca\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:42:13-82
+266            android:directBootAware="true"
+266-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\98564530026934e5d622580df22e15ca\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:43:13-43
+267            android:exported="false" >
+267-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\98564530026934e5d622580df22e15ca\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:44:13-37
+268            <intent-filter android:priority="-500" >
+268-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\98564530026934e5d622580df22e15ca\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:45:13-47:29
+268-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\98564530026934e5d622580df22e15ca\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:45:28-51
+269                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+269-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\98564530026934e5d622580df22e15ca\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:46:17-78
+269-->[com.google.firebase:firebase-messaging:23.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\98564530026934e5d622580df22e15ca\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:46:25-75
+270            </intent-filter>
+271        </service>
+272        <service
+272-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\afd7b43bd889fa0b77ebfe042dcac431\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:29:9-35:19
+273            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+273-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\afd7b43bd889fa0b77ebfe042dcac431\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:30:13-103
+274            android:exported="false" >
+274-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\afd7b43bd889fa0b77ebfe042dcac431\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:31:13-37
+275            <meta-data
+275-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\afd7b43bd889fa0b77ebfe042dcac431\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:32:13-34:39
+276                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+276-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\afd7b43bd889fa0b77ebfe042dcac431\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:33:17-94
+277                android:value="cct" />
+277-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\afd7b43bd889fa0b77ebfe042dcac431\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:34:17-36
+278        </service>
+279
+280        <activity
+280-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:27:9-44:20
+281            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+281-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:28:13-80
+282            android:excludeFromRecents="true"
+282-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:29:13-46
+283            android:exported="true"
+283-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:30:13-36
+284            android:launchMode="singleTask"
+284-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:31:13-44
+285            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+285-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:32:13-72
+286            <intent-filter>
+286-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:33:13-43:29
+287                <action android:name="android.intent.action.VIEW" />
+287-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:76:17-69
+287-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:76:25-66
+288
+289                <category android:name="android.intent.category.DEFAULT" />
+289-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:17-76
+289-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:27-73
+290                <category android:name="android.intent.category.BROWSABLE" />
+290-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:37:17-78
+290-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:37:27-75
+291
+292                <data
+292-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:39:17-42:51
+293                    android:host="firebase.auth"
+293-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:40:21-49
+294                    android:path="/"
+294-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:41:21-37
+295                    android:scheme="genericidp" />
+295-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:42:21-48
+296            </intent-filter>
+297        </activity>
+298        <activity
+298-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:45:9-62:20
+299            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+299-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:46:13-79
+300            android:excludeFromRecents="true"
+300-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:47:13-46
+301            android:exported="true"
+301-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:48:13-36
+302            android:launchMode="singleTask"
+302-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:49:13-44
+303            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+303-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:50:13-72
+304            <intent-filter>
+304-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:51:13-61:29
+305                <action android:name="android.intent.action.VIEW" />
+305-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:76:17-69
+305-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:76:25-66
+306
+307                <category android:name="android.intent.category.DEFAULT" />
+307-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:17-76
+307-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:27-73
+308                <category android:name="android.intent.category.BROWSABLE" />
+308-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:37:17-78
+308-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:37:27-75
+309
+310                <data
+310-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:39:17-42:51
+311                    android:host="firebase.auth"
+311-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:40:21-49
+312                    android:path="/"
+312-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:41:21-37
+313                    android:scheme="recaptcha" />
+313-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:42:21-48
+314            </intent-filter>
+315        </activity>
+316
+317        <service
+317-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:64:9-73:19
+318            android:name="com.google.firebase.auth.api.fallback.service.FirebaseAuthFallbackService"
+318-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:65:13-101
+319            android:enabled="true"
+319-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:66:13-35
+320            android:exported="false" >
+320-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:67:13-37
+321            <intent-filter>
+321-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:68:13-72:29
+322                <action android:name="com.google.firebase.auth.api.gms.service.START" />
+322-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:69:17-89
+322-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:69:25-86
+323
+324                <category android:name="android.intent.category.DEFAULT" />
+324-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:17-76
+324-->[com.google.firebase:firebase-auth:21.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:36:27-73
+325            </intent-filter>
+326        </service>
+327
+328        <provider
+328-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\e9bee4f77b660f6ff89d0b5e41260363\jetified-firebase-common-20.0.0\AndroidManifest.xml:26:9-31:39
+329            android:name="com.google.firebase.provider.FirebaseInitProvider"
+329-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\e9bee4f77b660f6ff89d0b5e41260363\jetified-firebase-common-20.0.0\AndroidManifest.xml:27:13-77
+330            android:authorities="com.tapforce.deliverytap_delivery.firebaseinitprovider"
+330-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\e9bee4f77b660f6ff89d0b5e41260363\jetified-firebase-common-20.0.0\AndroidManifest.xml:28:13-72
+331            android:directBootAware="true"
+331-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\e9bee4f77b660f6ff89d0b5e41260363\jetified-firebase-common-20.0.0\AndroidManifest.xml:29:13-43
+332            android:exported="false"
+332-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\e9bee4f77b660f6ff89d0b5e41260363\jetified-firebase-common-20.0.0\AndroidManifest.xml:30:13-37
+333            android:initOrder="100" /> <!-- Needs to be explicitly declared on P+ -->
+333-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\e9bee4f77b660f6ff89d0b5e41260363\jetified-firebase-common-20.0.0\AndroidManifest.xml:31:13-36
+334        <uses-library
+334-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\071f32299edee94b84cbdef97955621b\jetified-play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
+335            android:name="org.apache.http.legacy"
+335-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\071f32299edee94b84cbdef97955621b\jetified-play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
+336            android:required="false" />
+336-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\071f32299edee94b84cbdef97955621b\jetified-play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
+337
+338        <activity
+338-->[com.google.android.gms:play-services-auth:20.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\850ef13ec2cd7a7ea527ff79a705c18a\jetified-play-services-auth-20.0.1\AndroidManifest.xml:23:9-27:75
+339            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+339-->[com.google.android.gms:play-services-auth:20.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\850ef13ec2cd7a7ea527ff79a705c18a\jetified-play-services-auth-20.0.1\AndroidManifest.xml:24:13-93
+340            android:excludeFromRecents="true"
+340-->[com.google.android.gms:play-services-auth:20.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\850ef13ec2cd7a7ea527ff79a705c18a\jetified-play-services-auth-20.0.1\AndroidManifest.xml:25:13-46
+341            android:exported="false"
+341-->[com.google.android.gms:play-services-auth:20.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\850ef13ec2cd7a7ea527ff79a705c18a\jetified-play-services-auth-20.0.1\AndroidManifest.xml:26:13-37
+342            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+342-->[com.google.android.gms:play-services-auth:20.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\850ef13ec2cd7a7ea527ff79a705c18a\jetified-play-services-auth-20.0.1\AndroidManifest.xml:27:13-72
+343        <!--
+344            Service handling Google Sign-In user revocation. For apps that do not integrate with
+345            Google Sign-In, this service will never be started.
+346        -->
+347        <service
+347-->[com.google.android.gms:play-services-auth:20.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\850ef13ec2cd7a7ea527ff79a705c18a\jetified-play-services-auth-20.0.1\AndroidManifest.xml:33:9-37:51
+348            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+348-->[com.google.android.gms:play-services-auth:20.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\850ef13ec2cd7a7ea527ff79a705c18a\jetified-play-services-auth-20.0.1\AndroidManifest.xml:34:13-89
+349            android:exported="true"
+349-->[com.google.android.gms:play-services-auth:20.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\850ef13ec2cd7a7ea527ff79a705c18a\jetified-play-services-auth-20.0.1\AndroidManifest.xml:35:13-36
+350            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+350-->[com.google.android.gms:play-services-auth:20.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\850ef13ec2cd7a7ea527ff79a705c18a\jetified-play-services-auth-20.0.1\AndroidManifest.xml:36:13-107
+351            android:visibleToInstantApps="true" />
+351-->[com.google.android.gms:play-services-auth:20.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\850ef13ec2cd7a7ea527ff79a705c18a\jetified-play-services-auth-20.0.1\AndroidManifest.xml:37:13-48
+352
+353        <activity
+353-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\1c0769389455a4c14b7a50bc2530cb4a\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+354            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+354-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\1c0769389455a4c14b7a50bc2530cb4a\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+355            android:exported="false"
+355-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\1c0769389455a4c14b7a50bc2530cb4a\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+356            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+356-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\1c0769389455a4c14b7a50bc2530cb4a\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+357
+358        <receiver
+358-->[com.google.android.gms:play-services-measurement:20.1.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\03391d50a256ac963c05cf67bfc528a4\jetified-play-services-measurement-20.1.0\AndroidManifest.xml:29:9-33:20
+359            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+359-->[com.google.android.gms:play-services-measurement:20.1.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\03391d50a256ac963c05cf67bfc528a4\jetified-play-services-measurement-20.1.0\AndroidManifest.xml:30:13-85
+360            android:enabled="true"
+360-->[com.google.android.gms:play-services-measurement:20.1.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\03391d50a256ac963c05cf67bfc528a4\jetified-play-services-measurement-20.1.0\AndroidManifest.xml:31:13-35
+361            android:exported="false" >
+361-->[com.google.android.gms:play-services-measurement:20.1.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\03391d50a256ac963c05cf67bfc528a4\jetified-play-services-measurement-20.1.0\AndroidManifest.xml:32:13-37
+362        </receiver>
+363
+364        <service
+364-->[com.google.android.gms:play-services-measurement:20.1.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\03391d50a256ac963c05cf67bfc528a4\jetified-play-services-measurement-20.1.0\AndroidManifest.xml:35:9-38:40
+365            android:name="com.google.android.gms.measurement.AppMeasurementService"
+365-->[com.google.android.gms:play-services-measurement:20.1.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\03391d50a256ac963c05cf67bfc528a4\jetified-play-services-measurement-20.1.0\AndroidManifest.xml:36:13-84
+366            android:enabled="true"
+366-->[com.google.android.gms:play-services-measurement:20.1.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\03391d50a256ac963c05cf67bfc528a4\jetified-play-services-measurement-20.1.0\AndroidManifest.xml:37:13-35
+367            android:exported="false" />
+367-->[com.google.android.gms:play-services-measurement:20.1.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\03391d50a256ac963c05cf67bfc528a4\jetified-play-services-measurement-20.1.0\AndroidManifest.xml:38:13-37
+368        <service
+368-->[com.google.android.gms:play-services-measurement:20.1.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\03391d50a256ac963c05cf67bfc528a4\jetified-play-services-measurement-20.1.0\AndroidManifest.xml:39:9-43:72
+369            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+369-->[com.google.android.gms:play-services-measurement:20.1.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\03391d50a256ac963c05cf67bfc528a4\jetified-play-services-measurement-20.1.0\AndroidManifest.xml:40:13-87
+370            android:enabled="true"
+370-->[com.google.android.gms:play-services-measurement:20.1.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\03391d50a256ac963c05cf67bfc528a4\jetified-play-services-measurement-20.1.0\AndroidManifest.xml:41:13-35
+371            android:exported="false"
+371-->[com.google.android.gms:play-services-measurement:20.1.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\03391d50a256ac963c05cf67bfc528a4\jetified-play-services-measurement-20.1.0\AndroidManifest.xml:42:13-37
+372            android:permission="android.permission.BIND_JOB_SERVICE" />
+372-->[com.google.android.gms:play-services-measurement:20.1.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\03391d50a256ac963c05cf67bfc528a4\jetified-play-services-measurement-20.1.0\AndroidManifest.xml:43:13-69
+373
+374        <meta-data
+374-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\4a1e8147c3db656939cfc830651ce63e\jetified-play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+375            android:name="com.google.android.gms.version"
+375-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\4a1e8147c3db656939cfc830651ce63e\jetified-play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+376            android:value="@integer/google_play_services_version" />
+376-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\4a1e8147c3db656939cfc830651ce63e\jetified-play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+377
+378        <provider
+378-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:31:9-39:20
+379            android:name="androidx.startup.InitializationProvider"
+379-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:32:13-67
+380            android:authorities="com.tapforce.deliverytap_delivery.androidx-startup"
+380-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:33:13-68
+381            android:exported="false" >
+381-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:34:13-37
+382            <meta-data
+382-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:36:13-38:52
+383                android:name="androidx.work.WorkManagerInitializer"
+383-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:37:17-68
+384                android:value="androidx.startup" />
+384-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:38:17-49
+385        </provider>
+386
+387        <service
+387-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:41:9-46:35
+388            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+388-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:42:13-88
+389            android:directBootAware="false"
+389-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:43:13-44
+390            android:enabled="@bool/enable_system_alarm_service_default"
+390-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:44:13-72
+391            android:exported="false" />
+391-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:45:13-37
+392        <service
+392-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:47:9-53:35
+393            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+393-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:48:13-84
+394            android:directBootAware="false"
+394-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:49:13-44
+395            android:enabled="@bool/enable_system_job_service_default"
+395-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:50:13-70
+396            android:exported="true"
+396-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:51:13-36
+397            android:permission="android.permission.BIND_JOB_SERVICE" />
+397-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:52:13-69
+398        <service
+398-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:54:9-59:35
+399            android:name="androidx.work.impl.foreground.SystemForegroundService"
+399-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:55:13-81
+400            android:directBootAware="false"
+400-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:56:13-44
+401            android:enabled="@bool/enable_system_foreground_service_default"
+401-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:57:13-77
+402            android:exported="false" />
+402-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:58:13-37
+403
+404        <receiver
+404-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:61:9-66:35
+405            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+405-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:62:13-88
+406            android:directBootAware="false"
+406-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:63:13-44
+407            android:enabled="true"
+407-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:64:13-35
+408            android:exported="false" />
+408-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:65:13-37
+409        <receiver
+409-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:67:9-77:20
+410            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+410-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:68:13-106
+411            android:directBootAware="false"
+411-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:69:13-44
+412            android:enabled="false"
+412-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:70:13-36
+413            android:exported="false" >
+413-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:71:13-37
+414            <intent-filter>
+414-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:73:13-76:29
+415                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+415-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:74:17-87
+415-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:74:25-84
+416                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+416-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:75:17-90
+416-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:75:25-87
+417            </intent-filter>
+418        </receiver>
+419        <receiver
+419-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:78:9-88:20
+420            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+420-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:79:13-104
+421            android:directBootAware="false"
+421-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:80:13-44
+422            android:enabled="false"
+422-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:81:13-36
+423            android:exported="false" >
+423-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:82:13-37
+424            <intent-filter>
+424-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:84:13-87:29
+425                <action android:name="android.intent.action.BATTERY_OKAY" />
+425-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:85:17-77
+425-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:85:25-74
+426                <action android:name="android.intent.action.BATTERY_LOW" />
+426-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:86:17-76
+426-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:86:25-73
+427            </intent-filter>
+428        </receiver>
+429        <receiver
+429-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:89:9-99:20
+430            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+430-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:90:13-104
+431            android:directBootAware="false"
+431-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:91:13-44
+432            android:enabled="false"
+432-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:92:13-36
+433            android:exported="false" >
+433-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:93:13-37
+434            <intent-filter>
+434-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:95:13-98:29
+435                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+435-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:96:17-83
+435-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:96:25-80
+436                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+436-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:97:17-82
+436-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:97:25-79
+437            </intent-filter>
+438        </receiver>
+439        <receiver
+439-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:100:9-109:20
+440            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+440-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:101:13-103
+441            android:directBootAware="false"
+441-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:102:13-44
+442            android:enabled="false"
+442-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:103:13-36
+443            android:exported="false" >
+443-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:104:13-37
+444            <intent-filter>
+444-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:106:13-108:29
+445                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+445-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:107:17-79
+445-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:107:25-76
+446            </intent-filter>
+447        </receiver>
+448        <receiver
+448-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:110:9-121:20
+449            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+449-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:111:13-88
+450            android:directBootAware="false"
+450-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:112:13-44
+451            android:enabled="false"
+451-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:113:13-36
+452            android:exported="false" >
+452-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:114:13-37
+453            <intent-filter>
+453-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:116:13-120:29
+454                <action android:name="android.intent.action.BOOT_COMPLETED" />
+454-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:108:17-79
+454-->[com.onesignal:OneSignal:4.6.6] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:108:25-76
+455                <action android:name="android.intent.action.TIME_SET" />
+455-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:118:17-73
+455-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:118:25-70
+456                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+456-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:119:17-81
+456-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:119:25-78
+457            </intent-filter>
+458        </receiver>
+459        <receiver
+459-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:122:9-131:20
+460            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+460-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:123:13-99
+461            android:directBootAware="false"
+461-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:124:13-44
+462            android:enabled="@bool/enable_system_alarm_service_default"
+462-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:125:13-72
+463            android:exported="false" >
+463-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:126:13-37
+464            <intent-filter>
+464-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:128:13-130:29
+465                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+465-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:129:17-98
+465-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:129:25-95
+466            </intent-filter>
+467        </receiver>
+468        <receiver
+468-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:132:9-142:20
+469            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+469-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:133:13-78
+470            android:directBootAware="false"
+470-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:134:13-44
+471            android:enabled="true"
+471-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:135:13-35
+472            android:exported="true"
+472-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:136:13-36
+473            android:permission="android.permission.DUMP" >
+473-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:137:13-57
+474            <intent-filter>
+474-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:139:13-141:29
+475                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+475-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:140:17-88
+475-->[androidx.work:work-runtime:2.7.1] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:140:25-85
+476            </intent-filter>
+477        </receiver>
+478
+479        <service
+479-->[androidx.room:room-runtime:2.2.5] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\20ab9516f5f592df29683e213cda0be8\room-runtime-2.2.5\AndroidManifest.xml:25:9-28:40
+480            android:name="androidx.room.MultiInstanceInvalidationService"
+480-->[androidx.room:room-runtime:2.2.5] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\20ab9516f5f592df29683e213cda0be8\room-runtime-2.2.5\AndroidManifest.xml:26:13-74
+481            android:directBootAware="true"
+481-->[androidx.room:room-runtime:2.2.5] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\20ab9516f5f592df29683e213cda0be8\room-runtime-2.2.5\AndroidManifest.xml:27:13-43
+482            android:exported="false" />
+482-->[androidx.room:room-runtime:2.2.5] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\20ab9516f5f592df29683e213cda0be8\room-runtime-2.2.5\AndroidManifest.xml:28:13-37
+483        <service
+483-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\6d617e86a184161bb8f234c5ee6e158c\jetified-transport-runtime-3.0.0\AndroidManifest.xml:26:9-30:19
+484            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+484-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\6d617e86a184161bb8f234c5ee6e158c\jetified-transport-runtime-3.0.0\AndroidManifest.xml:27:13-117
+485            android:exported="false"
+485-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\6d617e86a184161bb8f234c5ee6e158c\jetified-transport-runtime-3.0.0\AndroidManifest.xml:28:13-37
+486            android:permission="android.permission.BIND_JOB_SERVICE" >
+486-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\6d617e86a184161bb8f234c5ee6e158c\jetified-transport-runtime-3.0.0\AndroidManifest.xml:29:13-69
+487        </service>
+488
+489        <receiver
+489-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\6d617e86a184161bb8f234c5ee6e158c\jetified-transport-runtime-3.0.0\AndroidManifest.xml:32:9-34:40
+490            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+490-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\6d617e86a184161bb8f234c5ee6e158c\jetified-transport-runtime-3.0.0\AndroidManifest.xml:33:13-132
+491            android:exported="false" />
+491-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\Legion\.gradle\caches\transforms-2\files-2.1\6d617e86a184161bb8f234c5ee6e158c\jetified-transport-runtime-3.0.0\AndroidManifest.xml:34:13-37
+492    </application>
+493
+494</manifest>

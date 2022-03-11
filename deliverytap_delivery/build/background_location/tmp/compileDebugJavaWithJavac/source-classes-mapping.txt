@@ -1,0 +1,2 @@
+com/almoullim/background_location/BuildConfig.java
+ com.almoullim.background_location.BuildConfig
