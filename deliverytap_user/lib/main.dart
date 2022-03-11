@@ -8,6 +8,7 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:deliverytap_user/services/UserDBService.dart';
 import 'package:deliverytap_user/services/CategoryDBService.dart';
 import 'package:deliverytap_user/services/StoreDBService.dart';
+import 'package:deliverytap_user/services/MyOrderDBService.dart';
 import 'package:deliverytap_user/utils/Constants.dart';
 import 'package:deliverytap_user/utils/Common.dart';
 import 'package:deliverytap_user/utils/Colors.dart';
@@ -25,6 +26,7 @@ FirebaseAuth auth = FirebaseAuth.instance;
 UserDBService userDBService = UserDBService();
 CategoryDBService categoryDBService = CategoryDBService();
 StoreDBService storeDBService = StoreDBService();
+MyOrderDBService myOrderDBService = MyOrderDBService();
 
 AppStore appStore = AppStore();
 

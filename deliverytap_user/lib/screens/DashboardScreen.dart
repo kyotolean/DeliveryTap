@@ -8,6 +8,7 @@ import 'package:nb_utils/nb_utils.dart';
 
 import 'LoginScreen.dart';
 import 'HomeFragment.dart';
+import 'OrderFragment.dart';
 
 class DashboardScreen extends StatefulWidget {
   static String tag = '/DashboardScreen';
@@ -21,7 +22,7 @@ class DashboardScreenState extends State<DashboardScreen> {
 
   List<Widget> screens = [
     HomeFragment(),
-    HomeFragment(),
+    OrderFragment(),
     HomeFragment(),
     HomeFragment()
   ];

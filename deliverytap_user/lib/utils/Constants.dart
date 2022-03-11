@@ -37,3 +37,12 @@ const STORES = 'stores';
 const STORE_REVIEWS = 'storeReviews';
 
 const DocLimit = 10;
+
+/*ORDER STATUS*/
+const ORDER_NEW = 'New';
+const ORDER_PACKING = 'Packing';
+const ORDER_ASSIGNED = 'Assigned';
+const ORDER_READY = 'Ready';
+const ORDER_DELIVERING = 'Delivering';
+const ORDER_COMPLETE = 'Completed';
+const ORDER_CANCELLED = 'Cancelled';

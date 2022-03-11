@@ -66,3 +66,20 @@ class StoreReviewKeys {
   static String reviewerImage = 'reviewerImage';
   static String reviewerLocation = 'reviewerLocation';
 }
+
+class OrderKeys {
+  static String listOfOrder = 'listOfOrder';
+  static String totalAmount = 'totalAmount';
+  static String totalItem = 'totalItem';
+  static String userId = 'userId';
+  static String orderStatus = 'orderStatus';
+  static String orderId = 'orderId';
+  static String userLocation = 'userLocation';
+  static String userAddress = 'userAddress';
+  static String deliveryBoyLocation = 'deliveryBoyLocation';
+  static String deliveryBoyId = 'deliveryBoyId';
+  static String paymentMethod = 'paymentMethod';
+  static String city = 'city';
+  static String paymentStatus = 'paymentStatus';
+  static String deliveryCharge = 'deliveryCharge';
+}

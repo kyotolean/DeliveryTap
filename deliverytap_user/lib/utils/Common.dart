@@ -43,3 +43,40 @@ Future<void> saveOneSignalPlayerId() async {
     if (value!.userId.validate().isNotEmpty) await setValue(PLAYER_ID, value.userId.validate());
   });
 }
+
+Color getOrderStatusColor(String? orderStatus) {
+  if (orderStatus == ORDER_NEW) {
+    return Color(0xFF9A8500);
+  } else if (orderStatus == ORDER_PACKING) {
+    return Colors.blue;
+  } else if (orderStatus == ORDER_ASSIGNED) {
+    return Colors.orangeAccent;
+  } else if (orderStatus == ORDER_DELIVERING) {
+    return Colors.greenAccent;
+  } else if (orderStatus == ORDER_COMPLETE) {
+    return Colors.green;
+  } else if (orderStatus == ORDER_READY) {
+    return Colors.grey;
+  } else if (orderStatus == ORDER_CANCELLED) {
+    return Colors.red;
+  } else {
+    return Colors.black;
+  }
+}
+
+String getOrderStatusText(String orderStatus) {
+  if (orderStatus == ORDER_NEW) {
+    return "Order is being approved";
+  } else if (orderStatus == ORDER_PACKING || orderStatus == ORDER_ASSIGNED) {
+    return "Order is packing";
+  } else if (orderStatus == ORDER_READY) {
+    return "Your order is ready to picked up";
+  } else if (orderStatus == ORDER_DELIVERING) {
+    return "Your order is on the way";
+  } else if (orderStatus == ORDER_COMPLETE) {
+    return "Order is delivered";
+  } else if (orderStatus == ORDER_CANCELLED) {
+    return "Cancelled";
+  }
+  return orderStatus;
+}
