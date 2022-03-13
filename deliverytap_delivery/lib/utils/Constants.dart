@@ -31,3 +31,14 @@ const LoginTypeApple = 'apple';
 const DELIVERY_BOY = 'DeliveryBoy';
 const USER_ROLE = 'USER_ROLE';
 const DELIVERY_BOY_ID = 'deliveryBoyId';
+
+
+const ORDER_STATUS_NEW = 'New';
+const ORDER_STATUS_COOKING = 'Cooking';
+const ORDER_STATUS_ASSIGNED = 'Assigned';
+const ORDER_STATUS_READY = 'Ready';
+const ORDER_STATUS_DELIVERING = 'Delivering';
+const ORDER_STATUS_COMPLETE = 'Completed';
+const ORDER_STATUS_CANCELLED = 'Cancelled';
+
+const DocLimit = 10;

@@ -20,3 +20,33 @@ class UserKey {
   static String isTester = 'isTester';
   static String availabilityStatus = 'availabilityStatus';
 }
+
+class OrderKey {
+  static String number = 'number';
+  static String orderItems = 'listOfOrder';
+  static String totalAmount = 'totalAmount';
+  static String restaurantId = 'restaurantId';
+  static String deliveryBoyId = 'deliveryBoyId';
+  static String userId = 'userId';
+  static String orderStatus = 'orderStatus';
+  static String userAddress = 'userAddress';
+  static String userLocation = 'userLocation';
+  static String deliveryBoyLocation = 'deliveryBoyLocation';
+  static String paymentMethod = 'paymentMethod';
+  static String paymentStatus = 'paymentStatus';
+  static String restaurantCity = 'restaurantCity';
+  static String orderId = 'orderId';
+  static String deliveryCharge = 'deliveryCharge';
+  static String restaurantName = 'restaurantName';
+
+}
+
+
+
+
+class OrderItemsKey {
+  static String itemName = 'itemName';
+  static String image = 'image';
+  static String itemPrice = 'itemPrice';
+  static String qty = 'qty';
+}

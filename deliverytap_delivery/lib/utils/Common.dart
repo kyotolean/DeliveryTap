@@ -80,3 +80,41 @@ Future<String?> getUserCurrentCity() async {
     throw 'Location permission not allowed';
   }
 }
+
+
+String? getOrderStatusText(String? orderStatus) {
+  if (orderStatus == ORDER_STATUS_NEW) {
+    return 'Order is being approved';
+  } else if (orderStatus == ORDER_STATUS_COOKING || orderStatus == ORDER_STATUS_ASSIGNED) {
+    return 'Order is cooking';
+  } else if (orderStatus == ORDER_STATUS_READY) {
+    return 'Order is ready to picked up. You are travelling to Restaurant';
+  } else if (orderStatus == ORDER_STATUS_DELIVERING) {
+    return 'You are delivering. You are travelling to Customer';
+  } else if (orderStatus == ORDER_STATUS_COMPLETE) {
+    return 'Order is delivered';
+  } else if (orderStatus == ORDER_STATUS_CANCELLED) {
+    return 'Cancelled';
+  }
+  return orderStatus;
+}
+
+Color getOrderStatusColor(String? orderStatus) {
+  if (orderStatus == ORDER_STATUS_NEW) {
+    return Color(0xFF9A8500);
+  } else if (orderStatus == ORDER_STATUS_COOKING) {
+    return Colors.blue;
+  } else if (orderStatus == ORDER_STATUS_ASSIGNED) {
+    return Colors.orangeAccent;
+  } else if (orderStatus == ORDER_STATUS_DELIVERING) {
+    return Colors.greenAccent;
+  } else if (orderStatus == ORDER_STATUS_COMPLETE) {
+    return Colors.green;
+  } else if (orderStatus == ORDER_STATUS_READY) {
+    return Colors.grey;
+  } else if (orderStatus == ORDER_STATUS_CANCELLED) {
+    return Colors.red;
+  } else {
+    return Colors.black;
+  }
+}

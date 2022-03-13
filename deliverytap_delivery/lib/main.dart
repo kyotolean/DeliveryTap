@@ -5,6 +5,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:deliverytap_delivery/screen/SplashScreen.dart';
 import 'package:deliverytap_delivery/services/AuthService.dart';
+import 'package:deliverytap_delivery/services/OrderService.dart';
 import 'package:deliverytap_delivery/services/UserService.dart';
 import 'package:deliverytap_delivery/store/AppStore.dart';
 import 'package:deliverytap_delivery/utils/Colors.dart';
@@ -18,8 +19,11 @@ AppStore appStore = AppStore();
 
 FirebaseFirestore db = FirebaseFirestore.instance;
 
+
+OrderService orderServices = OrderService();
 UserService userService = UserService();
 AuthService authService = AuthService();
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
