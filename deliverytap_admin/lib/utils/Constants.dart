@@ -26,3 +26,13 @@ const DELIVERY_BOY = 'DeliveryBoy';
 const USER = 'User';
 const ADMIN = 'Admin';
 const REST_MANAGER = 'RestaurantManager';
+
+/*store*/
+const STORE_ID = 'STORE_ID';
+const STORE_NAME = 'STORE_NAME';
+const STORE_CITY = 'STORE_CITY';
+
+//region LiveStream Keys
+const StreamSelectItem = 'StreamSelectItem';
+const StreamUpdateDrawer = 'StreamUpdateDrawer';
+//endregion

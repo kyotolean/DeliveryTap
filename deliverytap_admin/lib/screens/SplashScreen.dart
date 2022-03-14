@@ -3,6 +3,8 @@ import 'package:deliverytap_admin/main.dart';
 import 'package:deliverytap_admin/utils/Colors.dart';
 import 'package:deliverytap_admin/utils/Constants.dart';
 import 'package:nb_utils/nb_utils.dart';
+import 'package:deliverytap_admin/screens/DashboardScreen.dart';
+import 'package:deliverytap_admin/screens/SignInScreen.dart';
 
 class SplashScreen extends StatefulWidget {
   static String tag = '/SplashScreen';
@@ -20,6 +22,11 @@ class SplashScreenState extends State<SplashScreen> {
 
   Future<void> init() async {
     await 2.seconds.delay;
+    if (getBoolAsync(IS_LOGGED_IN)) {
+      DashboardScreen().launch(context, isNewTask: true);
+    } else {
+      SignInScreen().launch(context, isNewTask: true);
+    }
   }
 
   @override

@@ -33,3 +33,34 @@ class Collect {
   static String reviews = 'reviews';
   static String deliveryBoyReviews = 'deliveryBoyReviews';
 }
+
+class StoreKey {
+  static String id = 'id';
+  static String storeName = 'storeName';
+  static String storeEmail = 'storeEmail';
+  static String storeDesc = 'storeDesc';
+  static String photoUrl = 'photoUrl';
+  static String openTime = 'openTime';
+  static String closeTime = 'closeTime';
+  static String storeAddress = 'storeAddress';
+  static String storeState = 'storeState';
+  static String storeCity = 'storeCity';
+  static String storeLatLng = 'storeLatLng';
+  static String storeContact = 'storeContact';
+  static String isDealOfTheDay = 'isDealOfTheDay';
+  static String couponCode = 'couponCode';
+  static String couponDesc = 'couponDesc';
+  static String caseSearch = 'caseSearch';
+  static String catList = 'catList';
+  static String ownerId = 'ownerId';
+  static String isDeleted = 'isDeleted';
+  static String deliveryCharge = 'deliveryCharge';
+}
+
+class CategoryKey {
+  static String id = 'id';
+  static String categoryName = 'categoryName';
+  static String image = 'image';
+  static String color = 'color';
+  static String isDeleted = 'isDeleted';
+}
