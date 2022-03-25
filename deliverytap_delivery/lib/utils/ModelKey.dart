@@ -41,7 +41,15 @@ class OrderKey {
 
 }
 
-
+class ReviewKey {
+  static String deliveryBoyId = 'deliveryBoyId';
+  static String orderId = 'orderId';
+  static String rating = 'rating';
+  static String review = 'review';
+  static String userId = 'userId';
+  static String userImage = 'userImage';
+  static String userName = 'userName';
+}
 
 
 class OrderItemsKey {

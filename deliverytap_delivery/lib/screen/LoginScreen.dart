@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import '/screen/SignUpScreen.dart';
+import 'package:deliverytap_delivery/screen/DashboardScreen.dart';
 import '/utils/Colors.dart';
 import '/utils/Common.dart';
 import '/utils/Constants.dart';
@@ -37,9 +38,8 @@ class LoginScreenState extends State<LoginScreen> {
 
     Geolocator.requestPermission();
   }
-
   Future<void> signIn() async {
-
+    if (await checkPermission()) {
       if (getStringAsync(PLAYER_ID).isEmpty) {
         await saveOneSignalPlayerId().then((value) {
           if (getStringAsync(PLAYER_ID).isEmpty) return toast(errorMessage);
@@ -48,20 +48,16 @@ class LoginScreenState extends State<LoginScreen> {
       if (formKey.currentState!.validate()) {
         appStore.setLoading(true);
 
-        await authService
-            .signInWithEmailPassword(
-                email: emailController.text.trim(),
-                password: passController.text.trim())
-            .then((value) async {
+        await authService.signInWithEmailPassword(email: emailController.text.trim(), password: passController.text.trim()).then((value) async {
           appStore.setLoading(false);
 
-          if (getIntAsync(USER_CHECK) == 0 &&
-              getStringAsync(USER_ROLE) == DELIVERY_BOY) {
-            toast(
-                'You profile is under review. Wait some time or contact your administrator.');
+          if (getIntAsync(USER_CHECK) == 0 && getStringAsync(USER_ROLE) == DELIVERY_BOY) {
+            toast('You profile is under review. Wait some time or contact your administrator.');
             appStore.setLoggedIn(false);
           } else {
             appStore.setLoggedIn(true);
+
+            DashboardScreen().launch(context, isNewTask: true);
           }
         }).catchError((error) {
           appStore.setLoading(false);
@@ -69,7 +65,7 @@ class LoginScreenState extends State<LoginScreen> {
           toast(error.toString());
         });
       }
-   
+    }
   }
 
   @override
@@ -90,7 +86,6 @@ class LoginScreenState extends State<LoginScreen> {
                 child: Column(
                   children: [
                     32.height,
-                    16.height,
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -143,7 +138,6 @@ class LoginScreenState extends State<LoginScreen> {
                           textStyle: boldTextStyle(color: white),
                         ),
                         16.height,
-                        30.height,
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [

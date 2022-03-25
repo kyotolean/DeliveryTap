@@ -102,11 +102,6 @@ class OrderHistoryItemWidgetState extends State<OrderHistoryItemWidget> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  AppButton(
-                    padding: EdgeInsets.symmetric(horizontal: 16),
-                    child: Text('Track', style: boldTextStyle(color: Colors.white)),
-                    color: primaryColor,
-                  ).visible(widget.orderData!.orderStatus != ORDER_STATUS_COMPLETE),
                   Text(widget.orderData!.totalAmount.toCurrencyAmount(), maxLines: 1, overflow: TextOverflow.ellipsis, style: boldTextStyle(color: primaryColor, size: 18)),
                 ],
               )

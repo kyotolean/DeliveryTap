@@ -5,6 +5,7 @@ import 'package:deliverytap_delivery/main.dart';
 import 'package:deliverytap_delivery/screen/OrderHistoryScreen.dart';
 import 'package:deliverytap_delivery/screen/LoginScreen.dart';
 import 'package:deliverytap_delivery/screen/PendingOrderScreen.dart';
+import 'package:deliverytap_delivery/screen/ReviewScreen.dart';
 import 'package:deliverytap_delivery/utils/Colors.dart';
 import 'package:deliverytap_delivery/model/OrderModel.dart';
 import 'package:nb_utils/nb_utils.dart';
@@ -22,7 +23,8 @@ class DashboardScreenState extends State<DashboardScreen> with AfterLayoutMixin<
 
   List<Widget> page = [
     PendingOrderScreen(),
-    OrderHistoryScreen()
+    OrderHistoryScreen(),
+    ReviewScreen(),
   ];
 
   @override
@@ -66,19 +68,19 @@ class DashboardScreenState extends State<DashboardScreen> with AfterLayoutMixin<
           unselectedFontSize: 10,
           items: [
             BottomNavigationBarItem(
-              icon: Image.asset('images/NewOrder.png', color: Colors.grey, width: 26, height: 26),
+              icon: Icon(Icons.add),
               label: 'New Orders',
             ),
             BottomNavigationBarItem(
-              icon: Image.asset('images/OrderHistory.png', color: Colors.grey, width: 26, height: 26),
+              icon: Icon(Icons.av_timer),
               label: 'Order History',
             ),
             BottomNavigationBarItem(
-              icon: Image.asset('images/review.png', color: Colors.grey, width: 26, height: 26),
+              icon: Icon(Icons.mood),
               label: 'Review',
             ),
             BottomNavigationBarItem(
-              icon: Image.asset('images/profile.png', color: Colors.grey, width: 26, height: 26),
+              icon: Icon(Icons.account_circle),
               label: 'Profile',
             ),
           ],

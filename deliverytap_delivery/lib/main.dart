@@ -6,6 +6,7 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:deliverytap_delivery/screen/SplashScreen.dart';
 import 'package:deliverytap_delivery/services/AuthService.dart';
 import 'package:deliverytap_delivery/services/OrderService.dart';
+import 'package:deliverytap_delivery/services/ReviewService.dart';
 import 'package:deliverytap_delivery/services/UserService.dart';
 import 'package:deliverytap_delivery/store/AppStore.dart';
 import 'package:deliverytap_delivery/utils/Colors.dart';
@@ -23,16 +24,16 @@ FirebaseFirestore db = FirebaseFirestore.instance;
 OrderService orderServices = OrderService();
 UserService userService = UserService();
 AuthService authService = AuthService();
+ReviewService reviewService = ReviewService();
 
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await Firebase.initializeApp();
-
+  await initialize();
   defaultLoaderAccentColorGlobal = primaryColor;
   defaultCurrencySymbol = currencySymbol;
-
 
   await OneSignal.shared.setAppId(mOneSignalAppId);
 
@@ -55,6 +56,7 @@ class MyApp extends StatelessWidget {
         title: mAppName,
         theme: AppTheme.darkTheme,
         debugShowCheckedModeBanner: false,
+        navigatorKey: navigatorKey,
         home: SplashScreen(),
         builder: scrollBehaviour(),
       ),

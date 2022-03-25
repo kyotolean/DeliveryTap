@@ -1,3 +1,4 @@
+import 'package:deliverytap_delivery/screen/OrderHistoryScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
@@ -71,6 +72,34 @@ class PendingOrderScreenState extends State<PendingOrderScreen> {
 
                       return PendingOrderItemWidget(
                         orderData: snapshot.data![index],
+                        onAccept: () {
+                          showConfirmDialog(context, 'Do you want to accept this order?',positiveText: 'Yes' ,negativeText: 'no').then((value) async {
+                            if (value ?? false) {
+                              appStore.setLoading(true);
+
+                              await orderServices.getOrderByIdFuture(orderData.id).then((value) async {
+                                if (value.deliveryBoyId == null) {
+                                  await orderServices.updateDocument(orderData.id.validate(), {
+                                    OrderKey.orderStatus: ORDER_STATUS_ASSIGNED,
+                                    OrderKey.deliveryBoyId: getStringAsync(USER_ID),
+                                    CommonKey.updatedAt: DateTime.now(),
+                                  }).then((res) async {
+                                    appStore.setLoading(false);
+
+                                    await OrderHistoryScreen().launch(context);
+                                  }).catchError((e) {
+                                    appStore.setLoading(false);
+                                    log(e);
+                                    toast(e.toString());
+                                  });
+                                } else {
+                                  appStore.setLoading(false);
+                                  toast('Sorry this order has been assigned to another delivery boy');
+                                }
+                              });
+                            }
+                          });
+                        },
                       );
                     },
                   );
