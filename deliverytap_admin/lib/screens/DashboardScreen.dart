@@ -100,7 +100,7 @@ class DashboardScreenState extends State<DashboardScreen> with AfterLayoutMixin<
                               ListTile(
                                 title: Text(e.title!, style: boldTextStyle()),
                                 trailing: e.items != null
-                                    ? Icon(e.isExpand ? Icons.keyboard_arrow_up_rounded : Icons.keyboard_arrow_down_rounded, color: appStore.isDarkMode ? white : black)
+                                    ? Icon(e.isExpand ? Icons.keyboard_arrow_up_rounded : Icons.keyboard_arrow_down_rounded, color: white)
                                     : SizedBox(),
                                 onTap: () {
                                   if (e.items != null) {
@@ -177,7 +177,7 @@ class DashboardScreenState extends State<DashboardScreen> with AfterLayoutMixin<
               if (model.items != null)
                 Container(
                   width: isTap ? 280 : 0,
-                  color: appStore.isDarkMode ? context.cardColor : Colors.grey.shade200,
+                  color: context.cardColor,
                   child: Column(
                     children: [
                       Container(

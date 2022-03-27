@@ -14,9 +14,6 @@ abstract class _AppStore with Store {
   bool isAdmin = false;
 
   @observable
-  bool isDarkMode = false;
-
-  @observable
   bool isLoading = false;
 
   @observable

@@ -25,7 +25,7 @@ const LoginTypeApp = 'app';
 const DELIVERY_BOY = 'DeliveryBoy';
 const USER = 'User';
 const ADMIN = 'Admin';
-const REST_MANAGER = 'RestaurantManager';
+const MANAGER = 'Manager';
 
 /*store*/
 const STORE_ID = 'STORE_ID';

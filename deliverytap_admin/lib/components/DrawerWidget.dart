@@ -62,9 +62,7 @@ class DrawerWidgetState extends State<DrawerWidget> {
                     decoration: BoxDecoration(color: index == cIndex ? colorPrimary : context.cardColor, borderRadius: BorderRadius.circular(8)),
                     child: Image.asset(
                       list[cIndex].img!,
-                      color: appStore.isDarkMode
-                          ? Colors.white
-                          : index == cIndex
+                      color: index == cIndex
                           ? Colors.white
                           : black,
                       height: 24,

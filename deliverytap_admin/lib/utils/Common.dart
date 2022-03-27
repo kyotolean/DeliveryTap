@@ -16,3 +16,13 @@ InputDecoration inputDecoration({String? hintText, String? labelText}) {
     errorBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(8.0), borderSide: BorderSide(color: Colors.red, width: 0.5)),
   );
 }
+
+List<String> setSearchParam(String caseNumber) {
+  List<String> caseSearchList = [];
+  String temp = "";
+  for (int i = 0; i < caseNumber.length; i++) {
+    temp = temp + caseNumber[i];
+    caseSearchList.add(temp.toLowerCase());
+  }
+  return caseSearchList;
+}

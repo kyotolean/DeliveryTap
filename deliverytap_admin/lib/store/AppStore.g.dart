@@ -39,21 +39,6 @@ mixin _$AppStore on _AppStore, Store {
     });
   }
 
-  final _$isDarkModeAtom = Atom(name: '_AppStore.isDarkMode');
-
-  @override
-  bool get isDarkMode {
-    _$isDarkModeAtom.reportRead();
-    return super.isDarkMode;
-  }
-
-  @override
-  set isDarkMode(bool value) {
-    _$isDarkModeAtom.reportWrite(value, super.isDarkMode, () {
-      super.isDarkMode = value;
-    });
-  }
-
   final _$isLoadingAtom = Atom(name: '_AppStore.isLoading');
 
   @override
@@ -209,7 +194,6 @@ mixin _$AppStore on _AppStore, Store {
     return '''
 isLoggedIn: ${isLoggedIn},
 isAdmin: ${isAdmin},
-isDarkMode: ${isDarkMode},
 isLoading: ${isLoading},
 userProfileImage: ${userProfileImage},
 userFullName: ${userFullName},

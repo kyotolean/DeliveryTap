@@ -65,7 +65,7 @@ class SignInScreenState extends State<SignInScreen> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('Food', style: boldTextStyle(color: colorPrimary, size: 24)),
+                        Text('Delivery Tap', style: boldTextStyle(color: colorPrimary, size: 24)),
                         2.width,
                         Text('Admin', style: boldTextStyle(size: 24)),
                       ],

@@ -64,3 +64,25 @@ class CategoryKey {
   static String color = 'color';
   static String isDeleted = 'isDeleted';
 }
+
+class AddressResultKey {
+  static String address_components = 'address_components';
+  static String formatted_address = 'formatted_address';
+  static String geometry = 'geometry';
+  static String place_id = 'place_id';
+}
+
+class AddressComponentKey {
+  static String long_name = 'long_name';
+  static String short_name = 'short_name';
+  static String types = 'types';
+}
+
+class GeometryKey {
+  static String location = 'location';
+}
+
+class LocationKey {
+  static String lat = 'lat';
+  static String lng = 'lng';
+}

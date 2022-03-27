@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 
 import 'package:deliverytap_admin/screens/SignInScreen.dart';
+import 'package:deliverytap_admin/screens/Manager/AddStoreDetailScreen.dart';
 import 'package:deliverytap_admin/utils/Colors.dart';
 import 'package:deliverytap_admin/utils/Common.dart';
 import 'package:deliverytap_admin/utils/Constants.dart';
@@ -68,7 +69,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('Food', style: boldTextStyle(color: colorPrimary, size: 24)),
+                        Text('Delivery Tap', style: boldTextStyle(color: colorPrimary, size: 24)),
                         2.width,
                         Text('Admin', style: boldTextStyle(size: 24)),
                       ],
@@ -151,11 +152,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
   void signUp() {
     if (formKey.currentState!.validate()) {
       appStore.setLoading(true);
-      service.signUpWithEmailPassword(email: emailTextCont.text.trim(), password: passWordCont.text.trim(), displayName: nameTextCont.text.trim(), role: REST_MANAGER).then((value) async {
+      service.signUpWithEmailPassword(email: emailTextCont.text.trim(), password: passWordCont.text.trim(), displayName: nameTextCont.text.trim(), role: MANAGER).then((value) async {
         await setValue(IS_LOGGED_IN, true);
 
         if (getBoolAsync(IS_ADMIN) || getBoolAsync(IS_TESTER)) {
           SignInScreen().launch(context);
+        } else {
+          AddStoreDetailScreen().launch(context, isNewTask: true);
         }
 
 

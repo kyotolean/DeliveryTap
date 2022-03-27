@@ -44,7 +44,7 @@ class AuthService {
     await _auth.signInWithEmailAndPassword(email: email, password: password).then((value) async {
       if (await userService.isUserExist(value.user!.email, LoginTypeApp)) {
         await userService.userByEmail(email).then((user) async {
-          if (user.role == ADMIN || user.role == REST_MANAGER) {
+          if (user.role == ADMIN || user.role == MANAGER) {
             await setUserDetailPreference(user);
 
             await userService.updateDocument({
