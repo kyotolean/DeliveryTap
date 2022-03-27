@@ -29,6 +29,12 @@ class SplashScreenState extends State<SplashScreen> {
     );
 
     if (appStore.isLoggedIn) {
+      appStore.clearCart();
+      await myCartDBService.getCartList().then((value) {
+        value.forEach((element) {
+          appStore.addToCart(element);
+        });
+      });
 
       DashboardScreen().launch(context, isNewTask: true);
     } else {

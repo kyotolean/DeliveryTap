@@ -18,6 +18,8 @@ import 'package:onesignal_flutter/onesignal_flutter.dart';
 import 'package:paginate_firestore/bloc/pagination_listeners.dart';
 import 'package:paginate_firestore/paginate_firestore.dart';
 
+import 'OrderDetailsScreen.dart';
+
 class HomeFragment extends StatefulWidget {
   static String tag = '/HomeFragment';
 
@@ -55,6 +57,16 @@ class HomeFragmentState extends State<HomeFragment> with AfterLayoutMixin<HomeFr
     OneSignal.shared.setNotificationOpenedHandler((OSNotificationOpenedResult result) {
       if (!appStore.isLoggedIn) {
         LoginScreen().launch(context, isNewTask: true);
+      }else {
+        if (result.notification.additionalData!.containsKey('orderId')) {
+          String? orderId = result.notification.additionalData!['orderId'];
+
+          myOrderDBService.getOrderById(orderId).then((value) {
+            OrderDetailsScreen(listOfOrder: value.listOfOrder, orderData: value).launch(context);
+          }).catchError((e) {
+            toast(e.toString());
+          });
+        }
       }
     });
   }

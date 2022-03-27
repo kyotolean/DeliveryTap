@@ -83,3 +83,16 @@ class OrderKeys {
   static String paymentStatus = 'paymentStatus';
   static String deliveryCharge = 'deliveryCharge';
 }
+
+class CartKeys {
+  static String inStock = 'inStock';
+  static String description = 'description';
+  static String storeId = 'restaurantId';
+}
+
+class DeliveryBoyReviewKeys {
+  static String userId = 'userId';
+  static String userName = 'userName';
+  static String userImage = 'userImage';
+  static String deliveryBoyId = 'deliveryBoyId';
+}

@@ -42,7 +42,7 @@ class RegisterScreenState extends State<RegisterScreen> {
   Future<void> init() async {
     setStatusBarColor(scaffoldColorDark);
 
-    //saveOneSignalPlayerId();
+    saveOneSignalPlayerId();
   }
 
   Future<void> signUp() async {

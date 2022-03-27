@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:deliverytap_user/models/AddressModel.dart';
+import 'package:deliverytap_user/models/CartModel.dart';
 import 'package:deliverytap_user/utils/Constants.dart';
 import 'package:mobx/mobx.dart';
 import 'package:nb_utils/nb_utils.dart';
@@ -48,6 +49,32 @@ abstract class _AppStore with Store {
   @observable
   String? cityName = '';
 
+  @observable
+  List<CartModel?> mCartList = [];
+
+  @action
+  void addToCart(CartModel? value) {
+    mCartList.add(value);
+  }
+
+  @action
+  void removeFromCart(CartModel? value) {
+    mCartList.remove(value);
+  }
+
+  @action
+  void updateCartData(String id, CartModel? value) {
+    mCartList.forEachIndexed((element, index) {
+      if (element!.id == id) {
+        mCartList[index] = value;
+      }
+    });
+  }
+
+  @action
+  void clearCart() {
+    mCartList.clear();
+  }
 
   @action
   void setAddressModel(AddressModel? val) {

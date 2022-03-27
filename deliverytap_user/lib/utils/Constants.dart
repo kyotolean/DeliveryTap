@@ -30,6 +30,7 @@ const PHONE_NUMBER = 'Phone Number';
 /*Collection*/
 const CATEGORIES = 'categories';
 const DELIVERY_BOY_REVIEWS = 'deliveryBoyReviews';
+const ITEMS = 'items';
 const USERS = 'users';
 const CART = 'cart';
 const ORDERS = 'orders';
@@ -46,3 +47,9 @@ const ORDER_READY = 'Ready';
 const ORDER_DELIVERING = 'Delivering';
 const ORDER_COMPLETE = 'Completed';
 const ORDER_CANCELLED = 'Cancelled';
+
+/* payment method*/
+const CASH_ON_DELIVERY = 'COD';
+
+/// Payment Status
+const PAYMENT_STATUS_PENDING = 'Pending';

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:deliverytap_user/main.dart';
 import 'package:deliverytap_user/models/StoreModel.dart';
 import 'package:deliverytap_user/services/StoreReviewDBService.dart';
+import 'package:deliverytap_user/screens/StoreItemsScreen.dart';
 import 'package:deliverytap_user/utils/Colors.dart';
 import 'package:deliverytap_user/utils/Common.dart';
 import 'package:nb_utils/nb_utils.dart';
@@ -76,6 +77,7 @@ class StoreItemComponentState extends State<StoreItemComponent> {
       ),
     ).onTap(() {
       hideKeyboard(context);
+      StoreItemsScreen(store: widget.store).launch(context);
     }, highlightColor: scaffoldColorDark);
   }
 }

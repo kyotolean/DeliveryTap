@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:deliverytap_user/main.dart';
 import 'package:deliverytap_user/models/CategoryModel.dart';
 import 'package:deliverytap_user/utils/Colors.dart';
+import 'package:deliverytap_user/screens/StoreByCategoryScreen.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 class CategoryItemComponent extends StatefulWidget {
@@ -56,6 +57,7 @@ class _CategoryItemComponentState extends State<CategoryItemComponent> {
       ],
     ).onTap(() {
       hideKeyboard(context);
+      StoreByCategoryScreen(catName: widget.category!.categoryName.validate()).launch(context);
     }, highlightColor: scaffoldColorDark).paddingLeft(16);
   }
 }

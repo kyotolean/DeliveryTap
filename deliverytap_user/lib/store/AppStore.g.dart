@@ -204,6 +204,21 @@ mixin _$AppStore on _AppStore, Store {
     });
   }
 
+  final _$mCartListAtom = Atom(name: '_AppStore.mCartList');
+
+  @override
+  List<CartModel?> get mCartList {
+    _$mCartListAtom.reportRead();
+    return super.mCartList;
+  }
+
+  @override
+  set mCartList(List<CartModel?> value) {
+    _$mCartListAtom.reportWrite(value, super.mCartList, () {
+      super.mCartList = value;
+    });
+  }
+
   final _$setLoggedInAsyncAction = AsyncAction('_AppStore.setLoggedIn');
 
   @override
@@ -254,6 +269,50 @@ mixin _$AppStore on _AppStore, Store {
   }
 
   final _$_AppStoreActionController = ActionController(name: '_AppStore');
+
+  @override
+  void addToCart(CartModel? value) {
+    final _$actionInfo =
+    _$_AppStoreActionController.startAction(name: '_AppStore.addToCart');
+    try {
+      return super.addToCart(value);
+    } finally {
+      _$_AppStoreActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  void removeFromCart(CartModel? value) {
+    final _$actionInfo = _$_AppStoreActionController.startAction(
+        name: '_AppStore.removeFromCart');
+    try {
+      return super.removeFromCart(value);
+    } finally {
+      _$_AppStoreActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  void updateCartData(String id, CartModel? value) {
+    final _$actionInfo = _$_AppStoreActionController.startAction(
+        name: '_AppStore.updateCartData');
+    try {
+      return super.updateCartData(id, value);
+    } finally {
+      _$_AppStoreActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  void clearCart() {
+    final _$actionInfo =
+    _$_AppStoreActionController.startAction(name: '_AppStore.clearCart');
+    try {
+      return super.clearCart();
+    } finally {
+      _$_AppStoreActionController.endAction(_$actionInfo);
+    }
+  }
 
   @override
   void setAddressModel(AddressModel? val) {
@@ -336,7 +395,8 @@ userEmail: ${userEmail},
 userId: ${userId},
 phoneNumber: ${phoneNumber},
 addressModel: ${addressModel},
-cityName: ${cityName}
+cityName: ${cityName},
+mCartList: ${mCartList}
     ''';
   }
 }

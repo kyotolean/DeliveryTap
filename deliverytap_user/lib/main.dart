@@ -1,10 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:deliverytap_user/services/ItemDBService.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:deliverytap_user/services/MyCartDBService.dart';
 import 'package:deliverytap_user/services/UserDBService.dart';
 import 'package:deliverytap_user/services/CategoryDBService.dart';
 import 'package:deliverytap_user/services/StoreDBService.dart';
@@ -23,10 +25,12 @@ import 'AppTheme.dart';
 FirebaseFirestore db = FirebaseFirestore.instance;
 FirebaseAuth auth = FirebaseAuth.instance;
 
+MyCartDBService myCartDBService = MyCartDBService();
 UserDBService userDBService = UserDBService();
 CategoryDBService categoryDBService = CategoryDBService();
 StoreDBService storeDBService = StoreDBService();
 MyOrderDBService myOrderDBService = MyOrderDBService();
+ItemDBService itemDBService = ItemDBService();
 
 AppStore appStore = AppStore();
 
@@ -53,11 +57,13 @@ Future<void> initMethod() async {
 
     await OneSignal.shared.setAppId(mOneSignalAppId);
 
-    OneSignal.shared.setNotificationWillShowInForegroundHandler((OSNotificationReceivedEvent event) {
+    OneSignal.shared.setNotificationWillShowInForegroundHandler((
+        OSNotificationReceivedEvent event) {
       event.complete(event.notification);
     });
 
     saveOneSignalPlayerId();
+  }
 
     appStore.setNotification(getBoolAsync(IS_NOTIFICATION_ON, defaultValue: true));
 
@@ -68,9 +74,11 @@ Future<void> initMethod() async {
       appStore.setFullName(getStringAsync(USER_DISPLAY_NAME));
       appStore.setUserEmail(getStringAsync(USER_EMAIL));
       appStore.setUserProfile(getStringAsync(USER_PHOTO_URL));
+
+      myCartDBService = MyCartDBService();
     }
 
-  }
+
 }
 
 class MyApp extends StatelessWidget {

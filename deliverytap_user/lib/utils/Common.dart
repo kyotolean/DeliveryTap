@@ -80,3 +80,41 @@ String getOrderStatusText(String orderStatus) {
   }
   return orderStatus;
 }
+
+String getAmount(int data) {
+  String data2 = data.toString() + " UAH";
+
+  return data2;
+}
+
+List<String> lowRateTags() {
+  List<String> list = [];
+  list.add('items quantity');
+  list.add('packaging issue');
+  return list;
+}
+
+List<String> highRateTags() {
+  List<String> list = [];
+  list.add('timely service');
+  list.add('nice packaging');
+  list.add('worth the money');
+  return list;
+}
+
+List<String> lowDeliveryTags() {
+  List<String> list = [];
+  list.add('unclean packaging');
+  list.add('bad quality item');
+  list.add('value for money');
+  list.add('bad delivery service');
+  return list;
+}
+
+List<String> highDeliveryTags() {
+  List<String> list = [];
+  list.add('fast delivery with good quality');
+  list.add('spill proof packaging');
+  list.add('timely service');
+  return list;
+}

@@ -37,7 +37,7 @@ class LoginScreenState extends State<LoginScreen> {
   Future<void> init() async {
     setStatusBarColor(Colors.transparent, statusBarIconBrightness: Brightness.light);
 
-    //if (getStringAsync(PLAYER_ID).isEmpty) saveOneSignalPlayerId();
+    if (getStringAsync(PLAYER_ID).isEmpty) saveOneSignalPlayerId();
   }
 
   Future<void> loginWithEmail() async {

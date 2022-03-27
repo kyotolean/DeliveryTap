@@ -19,7 +19,7 @@ class StoreModel {
   String? storeDesc;
   List<String>? catList;
   String? storeCity;
-  int?deliveryCharge;
+  int? deliveryCharge;
 
   StoreModel({
     this.storeName,
