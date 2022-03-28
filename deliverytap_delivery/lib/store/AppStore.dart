@@ -22,7 +22,7 @@ abstract class _AppStore with Store {
   bool isLoading = false;
 
   @observable
-  bool isDarkMode = false;
+  bool isDarkMode = true;
 
   @observable
   String userCurrentCity = '';

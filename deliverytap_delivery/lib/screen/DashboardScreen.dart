@@ -25,6 +25,7 @@ class DashboardScreenState extends State<DashboardScreen> with AfterLayoutMixin<
     PendingOrderScreen(),
     OrderHistoryScreen(),
     ReviewScreen(),
+    PendingOrderScreen(),
   ];
 
   @override
