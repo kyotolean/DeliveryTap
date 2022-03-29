@@ -7,6 +7,8 @@ import 'package:deliverytap_user/utils/Common.dart';
 import 'package:intl/intl.dart';
 import 'package:nb_utils/nb_utils.dart';
 
+import '../screens/OrderDetailsScreen.dart';
+
 // ignore: must_be_immutable
 class OrderListComponent extends StatefulWidget {
   static String tag = '/OrderListComponent';
@@ -73,6 +75,7 @@ class OrderListComponentState extends State<OrderListComponent> {
           ),
         ],
       ).onTap(() {
+        OrderDetailsScreen(listOfOrder: widget.orderData!.listOfOrder, orderData: widget.orderData).launch(context);
       }, borderRadius: radius()),
     );
   }

@@ -90,7 +90,7 @@ class MyOrderBottomWidgetState extends State<MyOrderBottomWidget> {
       orderModel.paymentMethod = CASH_ON_DELIVERY;
       orderModel.deliveryCharge = getIntAsync(DELIVERY_CHARGES);
 
-      orderModel.storeCity = getStringAsync(USER_CITY_NAME);
+      orderModel.storeCity = "Lviv";
       orderModel.paymentStatus = PAYMENT_STATUS_PENDING;
       orderModel.userLocation = GeoPoint(appStore.addressModel!.userLocation!.latitude, appStore.addressModel!.userLocation!.longitude);
 

@@ -87,7 +87,7 @@ class OrderKeys {
 class CartKeys {
   static String inStock = 'inStock';
   static String description = 'description';
-  static String storeId = 'restaurantId';
+  static String storeId = 'storeId';
 }
 
 class DeliveryBoyReviewKeys {

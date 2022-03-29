@@ -15,11 +15,17 @@ class StoreDBService extends BaseService {
   Stream<List<StoreModel>> stores({required String searchText}) {
     return storesQuery(searchText: searchText).snapshots().map((x) => x.docs.map((y) => StoreModel.fromJson(y.data() as Map<String, dynamic>)).toList());
   }
-
+/*
   Query storesQuery({String searchText = ''}) {
     return searchText.isNotEmpty
         ? ref.where(StoreKeys.caseSearch, arrayContains: searchText.toLowerCase()).where(StoreKeys.storeCity, isEqualTo: getStringAsync(USER_CITY_NAME)).where(CommonKeys.isDeleted, isEqualTo: false)
         : ref.where(StoreKeys.storeCity, isEqualTo: getStringAsync(USER_CITY_NAME)).where(CommonKeys.isDeleted, isEqualTo: false);
+  }
+*/
+  Query storesQuery({String searchText = ''}) {
+    return searchText.isNotEmpty
+        ? ref.where(StoreKeys.caseSearch, arrayContains: searchText.toLowerCase()).where(CommonKeys.isDeleted, isEqualTo: false)
+        : ref.where(CommonKeys.isDeleted, isEqualTo: false);
   }
 
   Stream<List<StoreModel>> storeByCategory(String? categoryName, {String? searchText, String? cityName}) {
