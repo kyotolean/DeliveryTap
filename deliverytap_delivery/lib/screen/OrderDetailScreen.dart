@@ -99,7 +99,7 @@ class OrderDetailScreenState extends State<OrderDetailScreen> {
                         4.height,
                         createRichText(list: [
                           TextSpan(text: '${'Restaurant'} :- ', style: secondaryTextStyle()),
-                          TextSpan(text: widget.orderModel!.restaurantName.validate(), style: secondaryTextStyle()),
+                          TextSpan(text: widget.orderModel!.storeName.validate(), style: secondaryTextStyle()),
                         ])
                       ],
                     ).expand(),

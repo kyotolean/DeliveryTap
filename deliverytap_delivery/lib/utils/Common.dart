@@ -113,10 +113,10 @@ Future<String?> getUserCurrentCity() async {
 String? getOrderStatusText(String? orderStatus) {
   if (orderStatus == ORDER_STATUS_NEW) {
     return 'Order is being approved';
-  } else if (orderStatus == ORDER_STATUS_COOKING || orderStatus == ORDER_STATUS_ASSIGNED) {
+  } else if (orderStatus == ORDER_STATUS_PACKING || orderStatus == ORDER_STATUS_ASSIGNED) {
     return 'Order is packing';
   } else if (orderStatus == ORDER_STATUS_READY) {
-    return 'Order is ready to picked up. You are travelling to Restaurant';
+    return 'Order is ready to picked up. You are travelling to Store';
   } else if (orderStatus == ORDER_STATUS_DELIVERING) {
     return 'You are delivering. You are travelling to Customer';
   } else if (orderStatus == ORDER_STATUS_COMPLETE) {
@@ -130,7 +130,7 @@ String? getOrderStatusText(String? orderStatus) {
 Color getOrderStatusColor(String? orderStatus) {
   if (orderStatus == ORDER_STATUS_NEW) {
     return Color(0xFF9A8500);
-  } else if (orderStatus == ORDER_STATUS_COOKING) {
+  } else if (orderStatus == ORDER_STATUS_PACKING) {
     return Colors.blue;
   } else if (orderStatus == ORDER_STATUS_ASSIGNED) {
     return Colors.orangeAccent;

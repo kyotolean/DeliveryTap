@@ -7,7 +7,7 @@ class OrderModel {
   int? number;
   List<OrderItems>? orderItems;
   int? totalAmount;
-  String? restaurantId;
+  String? storeId;
   String? deliveryBoyId;
   String? userId;
   String? orderStatus;
@@ -16,10 +16,10 @@ class OrderModel {
   GeoPoint? deliveryBoyLocation;
   String? paymentMethod;
   String? paymentStatus;
-  String? restaurantCity;
+  String? storeCity;
   String? orderId;
   int? deliveryCharge;
-  String? restaurantName;
+  String? storeName;
 
   OrderModel({
     this.id,
@@ -27,7 +27,7 @@ class OrderModel {
     this.number,
     this.orderItems,
     this.totalAmount,
-    this.restaurantId,
+    this.storeId,
     this.userId,
     this.orderStatus,
     this.userLocation,
@@ -35,11 +35,11 @@ class OrderModel {
     this.userAddress,
     this.paymentMethod,
     this.paymentStatus,
-    this.restaurantCity,
+    this.storeCity,
     this.deliveryBoyId,
     this.orderId,
     this.deliveryCharge,
-    this.restaurantName,
+    this.storeName,
   });
 
 
@@ -50,7 +50,7 @@ class OrderModel {
       number: json[OrderKey.number],
       orderItems: json[OrderKey.orderItems] != null ? (json[OrderKey.orderItems] as List).map((i) => OrderItems.fromJson(i)).toList() : null,
       totalAmount: json[OrderKey.totalAmount],
-      restaurantId: json[OrderKey.restaurantId],
+      storeId: json[OrderKey.storeId],
       userId: json[OrderKey.userId],
       orderStatus: json[OrderKey.orderStatus],
       userLocation: json[OrderKey.userLocation],
@@ -58,11 +58,11 @@ class OrderModel {
       userAddress: json[OrderKey.userAddress],
       paymentMethod: json[OrderKey.paymentMethod],
       paymentStatus: json[OrderKey.paymentStatus],
-      restaurantCity: json[OrderKey.restaurantCity],
+      storeCity: json[OrderKey.storeCity],
       deliveryBoyId: json[OrderKey.deliveryBoyId],
       orderId: json[OrderKey.orderId],
       deliveryCharge: json[OrderKey.deliveryCharge],
-      restaurantName: json[OrderKey.restaurantName],
+      storeName: json[OrderKey.storeName],
     );
   }
 
@@ -72,7 +72,7 @@ class OrderModel {
     data[CommonKey.createdAt] = this.createdAt;
     data[OrderKey.number] = this.number;
     data[OrderKey.totalAmount] = this.totalAmount;
-    data[OrderKey.restaurantId] = this.restaurantId;
+    data[OrderKey.storeId] = this.storeId;
     data[OrderKey.userId] = this.userId;
     data[OrderKey.orderStatus] = this.orderStatus;
     data[OrderKey.userLocation] = this.userLocation;
@@ -81,10 +81,10 @@ class OrderModel {
     data[OrderKey.paymentMethod] = this.paymentMethod;
     data[OrderKey.paymentStatus] = this.paymentStatus;
     data[OrderKey.deliveryBoyId] = this.deliveryBoyId;
-    data[OrderKey.restaurantCity] = this.restaurantCity;
+    data[OrderKey.storeCity] = this.storeCity;
     data[OrderKey.orderId] = this.orderId;
     data[OrderKey.deliveryCharge] = this.deliveryCharge;
-    data[OrderKey.restaurantName] = this.restaurantName;
+    data[OrderKey.storeName] = this.storeName;
     if (this.orderItems != null) {
       data[OrderKey.orderItems] = this.orderItems!.map((v) => v.toJson()).toList();
     }

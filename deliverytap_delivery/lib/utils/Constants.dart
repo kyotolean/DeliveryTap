@@ -34,7 +34,7 @@ const DELIVERY_BOY_ID = 'deliveryBoyId';
 
 
 const ORDER_STATUS_NEW = 'New';
-const ORDER_STATUS_COOKING = 'Packing';
+const ORDER_STATUS_PACKING = 'Packing';
 const ORDER_STATUS_ASSIGNED = 'Assigned';
 const ORDER_STATUS_READY = 'Ready';
 const ORDER_STATUS_DELIVERING = 'Delivering';

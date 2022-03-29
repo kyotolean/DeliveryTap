@@ -46,7 +46,6 @@ class OrderHistoryScreenState extends State<OrderHistoryScreen> {
           },
           query: orderServices.orderQuery(
             orderStatus: [ORDER_STATUS_DELIVERING, ORDER_STATUS_COMPLETE, ORDER_STATUS_ASSIGNED, ORDER_STATUS_READY],
-            city: appStore.userCurrentCity,
             deliveryBoyId: getStringAsync(USER_ID),
           ),
           isLive: true,

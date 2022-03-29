@@ -1,17 +1,17 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\IT-Step\\project\\1\\DeliveryTap-main\\deliverytap_delivery\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "D:\\dtDelivery\\deliverytap_delivery\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
-                    "source": "E:\\IT-Step\\project\\1\\DeliveryTap-main\\deliverytap_delivery\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "source": "D:\\dtDelivery\\deliverytap_delivery\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
-                        "startOffsets": "172,806",
+                        "startOffsets": "175,820",
                         "endLines": "7,16",
                         "endColumns": "12,12",
-                        "endOffsets": "464,970"
+                        "endOffsets": "471,986"
                     },
                     "to": {
                         "startLines": "2,7",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Legion\\.gradle\\caches\\transforms-2\\files-2.1\\8eaf89a15e03c4a0b61cb75405393ff1\\appcompat-1.0.0\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "C:\\Users\\Yenot\\.gradle\\caches\\transforms-2\\files-2.1\\8eaf89a15e03c4a0b61cb75405393ff1\\appcompat-1.0.0\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8",
                         "startColumns": "4,4,4,4,4,4,4",

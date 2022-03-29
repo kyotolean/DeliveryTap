@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\IT-Step\\project\\1\\DeliveryTap-main\\deliverytap_delivery\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
+            "outputFile": "D:\\dtDelivery\\deliverytap_delivery\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Legion\\.gradle\\caches\\transforms-2\\files-2.1\\8eaf89a15e03c4a0b61cb75405393ff1\\appcompat-1.0.0\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\Yenot\\.gradle\\caches\\transforms-2\\files-2.1\\8eaf89a15e03c4a0b61cb75405393ff1\\appcompat-1.0.0\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,19,32,33,34,35,36",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
@@ -23,17 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Legion\\.gradle\\caches\\transforms-2\\files-2.1\\7dbe88f7b6e9827bdd9ac54c043689c6\\work-runtime-2.7.1\\res\\values-v23\\values-v23.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,121",
-                        "endColumns": "65,62",
-                        "endOffsets": "116,179"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Legion\\.gradle\\caches\\transforms-2\\files-2.1\\933a9e362967939ae202a5413d6d24d1\\cardview-1.0.0\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\Yenot\\.gradle\\caches\\transforms-2\\files-2.1\\933a9e362967939ae202a5413d6d24d1\\cardview-1.0.0\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -49,6 +39,16 @@
                         "endLines": "41",
                         "endColumns": "12",
                         "endOffsets": "2920"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Yenot\\.gradle\\caches\\transforms-2\\files-2.1\\7dbe88f7b6e9827bdd9ac54c043689c6\\work-runtime-2.7.1\\res\\values-v23\\values-v23.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,121",
+                        "endColumns": "65,62",
+                        "endOffsets": "116,179"
                     }
                 }
             ]

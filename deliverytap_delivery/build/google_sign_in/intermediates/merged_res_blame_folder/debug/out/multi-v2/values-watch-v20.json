@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\IT-Step\\project\\1\\DeliveryTap-main\\deliverytap_delivery\\build\\google_sign_in\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
+            "outputFile": "D:\\dtDelivery\\deliverytap_delivery\\build\\google_sign_in\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Legion\\.gradle\\caches\\transforms-2\\files-2.1\\850ef13ec2cd7a7ea527ff79a705c18a\\jetified-play-services-auth-20.0.1\\res\\values-watch-v20\\values.xml",
+                    "source": "C:\\Users\\Yenot\\.gradle\\caches\\transforms-2\\files-2.1\\850ef13ec2cd7a7ea527ff79a705c18a\\jetified-play-services-auth-20.0.1\\res\\values-watch-v20\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",
@@ -23,10 +23,10 @@
             ]
         },
         {
-            "outputFile": "E:\\IT-Step\\project\\1\\DeliveryTap-main\\deliverytap_delivery\\build\\google_sign_in\\intermediates\\res\\merged\\debug\\values-watch-v20\\values-watch-v20.xml",
+            "outputFile": "D:\\dtDelivery\\deliverytap_delivery\\build\\google_sign_in\\intermediates\\res\\merged\\debug\\values-watch-v20\\values-watch-v20.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Legion\\.gradle\\caches\\transforms-2\\files-2.1\\850ef13ec2cd7a7ea527ff79a705c18a\\jetified-play-services-auth-20.0.1\\res\\values-watch-v20\\values.xml",
+                    "source": "C:\\Users\\Yenot\\.gradle\\caches\\transforms-2\\files-2.1\\850ef13ec2cd7a7ea527ff79a705c18a\\jetified-play-services-auth-20.0.1\\res\\values-watch-v20\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",

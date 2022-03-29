@@ -19,18 +19,18 @@ class OrderService extends BaseService {
     return await ref.where(CommonKey.id, isEqualTo: id).get().then((event) => OrderModel.fromJson(event.docs.first.data() as Map<String, dynamic>));
   }
 
-  Stream<List<OrderModel>> restaurantOrderServices({String? restaurantId}) {
-    return orderQuery(city: appStore.userCurrentCity, orderStatus: [ORDER_STATUS_COOKING], restaurantId: restaurantId).snapshots().map((x) {
+  Stream<List<OrderModel>> storeOrderServices({String? storeId}) {
+    return orderQuery(orderStatus: [ORDER_STATUS_PACKING], storeId: storeId).snapshots().map((x) {
       return x.docs.map((y) => OrderModel.fromJson(y.data() as Map<String, dynamic>)).toList();
     });
   }
 
-  Query orderQuery({String? restaurantId, List<String>? orderStatus, String? city, String deliveryBoyId = ''}) {
+  Query orderQuery({String? storeId, List<String>? orderStatus, String? city, String deliveryBoyId = ''}) {
     if (deliveryBoyId.isEmpty) {
-      return ref.where(OrderKey.restaurantCity, isEqualTo: city).where(OrderKey.orderStatus, whereIn: orderStatus).orderBy(CommonKey.createdAt, descending: true);
+      return ref.where(OrderKey.storeCity, isEqualTo: city).where(OrderKey.orderStatus, whereIn: orderStatus).orderBy(CommonKey.createdAt, descending: true);
     } else {
       return ref
-          .where(OrderKey.restaurantCity, isEqualTo: city)
+          .where(OrderKey.storeCity, isEqualTo: city)
           .where(OrderKey.orderStatus, whereIn: orderStatus)
           .where(OrderKey.deliveryBoyId, isEqualTo: deliveryBoyId)
           .orderBy(CommonKey.createdAt, descending: true);

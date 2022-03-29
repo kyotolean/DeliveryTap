@@ -25,7 +25,7 @@ class OrderKey {
   static String number = 'number';
   static String orderItems = 'listOfOrder';
   static String totalAmount = 'totalAmount';
-  static String restaurantId = 'restaurantId';
+  static String storeId = 'storeId';
   static String deliveryBoyId = 'deliveryBoyId';
   static String userId = 'userId';
   static String orderStatus = 'orderStatus';
@@ -34,10 +34,10 @@ class OrderKey {
   static String deliveryBoyLocation = 'deliveryBoyLocation';
   static String paymentMethod = 'paymentMethod';
   static String paymentStatus = 'paymentStatus';
-  static String restaurantCity = 'restaurantCity';
+  static String storeCity = 'storeCity';
   static String orderId = 'orderId';
   static String deliveryCharge = 'deliveryCharge';
-  static String restaurantName = 'restaurantName';
+  static String storeName = 'storeName';
 
 }
 

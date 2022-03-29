@@ -3,32 +3,32 @@
 3    package="com.almoullim.background_location" >
 4
 5    <uses-sdk android:minSdkVersion="18" />
-5-->D:\ALL\Free\+++\sdk_dart\flutter\.pub-cache\hosted\pub.dartlang.org\background_location-0.8.1\android\src\main\AndroidManifest.xml
+5-->C:\src\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\background_location-0.8.1\android\src\main\AndroidManifest.xml
 6
 7    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-7-->D:\ALL\Free\+++\sdk_dart\flutter\.pub-cache\hosted\pub.dartlang.org\background_location-0.8.1\android\src\main\AndroidManifest.xml:4:5-81
-7-->D:\ALL\Free\+++\sdk_dart\flutter\.pub-cache\hosted\pub.dartlang.org\background_location-0.8.1\android\src\main\AndroidManifest.xml:4:22-78
+7-->C:\src\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\background_location-0.8.1\android\src\main\AndroidManifest.xml:4:5-81
+7-->C:\src\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\background_location-0.8.1\android\src\main\AndroidManifest.xml:4:22-78
 8    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-8-->D:\ALL\Free\+++\sdk_dart\flutter\.pub-cache\hosted\pub.dartlang.org\background_location-0.8.1\android\src\main\AndroidManifest.xml:5:5-79
-8-->D:\ALL\Free\+++\sdk_dart\flutter\.pub-cache\hosted\pub.dartlang.org\background_location-0.8.1\android\src\main\AndroidManifest.xml:5:22-76
+8-->C:\src\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\background_location-0.8.1\android\src\main\AndroidManifest.xml:5:5-79
+8-->C:\src\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\background_location-0.8.1\android\src\main\AndroidManifest.xml:5:22-76
 9    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-9-->D:\ALL\Free\+++\sdk_dart\flutter\.pub-cache\hosted\pub.dartlang.org\background_location-0.8.1\android\src\main\AndroidManifest.xml:6:5-77
-9-->D:\ALL\Free\+++\sdk_dart\flutter\.pub-cache\hosted\pub.dartlang.org\background_location-0.8.1\android\src\main\AndroidManifest.xml:6:22-74
+9-->C:\src\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\background_location-0.8.1\android\src\main\AndroidManifest.xml:6:5-77
+9-->C:\src\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\background_location-0.8.1\android\src\main\AndroidManifest.xml:6:22-74
 10
 11    <application>
-11-->D:\ALL\Free\+++\sdk_dart\flutter\.pub-cache\hosted\pub.dartlang.org\background_location-0.8.1\android\src\main\AndroidManifest.xml:9:5-16:19
+11-->C:\src\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\background_location-0.8.1\android\src\main\AndroidManifest.xml:9:5-16:19
 12        <service
-12-->D:\ALL\Free\+++\sdk_dart\flutter\.pub-cache\hosted\pub.dartlang.org\background_location-0.8.1\android\src\main\AndroidManifest.xml:10:9-15:37
+12-->C:\src\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\background_location-0.8.1\android\src\main\AndroidManifest.xml:10:9-15:37
 13            android:name="com.almoullim.background_location.LocationUpdatesService"
-13-->D:\ALL\Free\+++\sdk_dart\flutter\.pub-cache\hosted\pub.dartlang.org\background_location-0.8.1\android\src\main\AndroidManifest.xml:11:13-51
+13-->C:\src\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\background_location-0.8.1\android\src\main\AndroidManifest.xml:11:13-51
 14            android:enabled="true"
-14-->D:\ALL\Free\+++\sdk_dart\flutter\.pub-cache\hosted\pub.dartlang.org\background_location-0.8.1\android\src\main\AndroidManifest.xml:13:13-35
+14-->C:\src\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\background_location-0.8.1\android\src\main\AndroidManifest.xml:13:13-35
 15            android:exported="true"
-15-->D:\ALL\Free\+++\sdk_dart\flutter\.pub-cache\hosted\pub.dartlang.org\background_location-0.8.1\android\src\main\AndroidManifest.xml:14:13-36
+15-->C:\src\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\background_location-0.8.1\android\src\main\AndroidManifest.xml:14:13-36
 16            android:foregroundServiceType="location"
-16-->D:\ALL\Free\+++\sdk_dart\flutter\.pub-cache\hosted\pub.dartlang.org\background_location-0.8.1\android\src\main\AndroidManifest.xml:12:13-53
+16-->C:\src\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\background_location-0.8.1\android\src\main\AndroidManifest.xml:12:13-53
 17            android:permission="" />
-17-->D:\ALL\Free\+++\sdk_dart\flutter\.pub-cache\hosted\pub.dartlang.org\background_location-0.8.1\android\src\main\AndroidManifest.xml:15:13-34
+17-->C:\src\Flutter\flutter\.pub-cache\hosted\pub.dartlang.org\background_location-0.8.1\android\src\main\AndroidManifest.xml:15:13-34
 18    </application>
 19
 20</manifest>

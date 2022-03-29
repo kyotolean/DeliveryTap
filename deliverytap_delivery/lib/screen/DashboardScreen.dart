@@ -29,6 +29,16 @@ class DashboardScreenState extends State<DashboardScreen> with AfterLayoutMixin<
   ];
 
   @override
+  void initState() {
+    super.initState();
+    init();
+  }
+
+  Future<void> init() async {
+
+  }
+
+  @override
   void afterFirstLayout(BuildContext context) {
     OneSignal.shared.setNotificationOpenedHandler((OSNotificationOpenedResult result) {
       if (!appStore.isLoggedIn) {

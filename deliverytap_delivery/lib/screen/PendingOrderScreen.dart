@@ -48,6 +48,7 @@ class PendingOrderScreenState extends State<PendingOrderScreen> {
             ? Stack(
           children: [
             StreamBuilder<List<OrderModel>>(
+              stream: orderServices.storeOrderServices(),
               builder: (_, snapshot) {
                 if (snapshot.hasData) {
                   if (snapshot.data!.isEmpty) {
