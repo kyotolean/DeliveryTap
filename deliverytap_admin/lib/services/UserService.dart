@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:deliverytap_admin/models/UserModel.dart';
 import 'package:deliverytap_admin/utils/ModelKeys.dart';
+import 'package:deliverytap_admin/utils/Constants.dart';
 
 import '../main.dart';
 import 'BaseService.dart';
@@ -68,6 +69,22 @@ class UserService extends BaseService {
       } else {
         throw 'No User Found';
       }
+    });
+  }
+
+  Future<UserModel> getDeliveryBoyDetails({String? deliveryBoydId, String? role}) async {
+    return ref!.where(UserKeys.uid, isEqualTo: deliveryBoydId).where(UserKeys.role, isEqualTo: DELIVERY_BOY).get().then((value) {
+      if (value.docs.isNotEmpty) {
+        return UserModel.fromJson(value.docs.first.data() as Map<String, dynamic>);
+      } else {
+        throw 'Data not found';
+      }
+    });
+  }
+
+  Future<List<UserModel>> getDeliveryBoys({String? city, String? role, String? restaurantId}) async {
+    return ref!.where(OrderKey.city, isEqualTo: city).where(UserKeys.role, isEqualTo: role).where(UserKeys.availabilityStatus, isEqualTo: true).get().then((value) {
+      return value.docs.map((e) => UserModel.fromJson(e.data() as Map<String, dynamic>)).toList();
     });
   }
 

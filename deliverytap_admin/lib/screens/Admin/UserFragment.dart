@@ -1,22 +1,27 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:deliverytap_admin/main.dart';
-import 'package:deliverytap_admin/models/StoreModel.dart';
-import 'package:deliverytap_admin/screens/Manager/AddStoreDetailScreen.dart';
-import 'package:deliverytap_admin/services/StoreService.dart';
+import 'package:deliverytap_admin/models/UserModel.dart';
+import 'package:deliverytap_admin/screens/Admin/components/UserWidget.dart';
+import 'package:deliverytap_admin/services/UserService.dart';
 import 'package:deliverytap_admin/utils/Colors.dart';
 import 'package:nb_utils/nb_utils.dart';
 
-import 'components/StoreWidget.dart';
+import 'components/AddUserDialog.dart';
 
-class StoreFragment extends StatefulWidget {
-  static String tag = '/StoreFragment';
+class UserFragment extends StatefulWidget {
+  static String tag = '/UserFragment';
+  final String? role;
+
+  UserFragment({this.role});
 
   @override
-  StoreFragmentState createState() => StoreFragmentState();
+  UserFragmentState createState() => UserFragmentState();
 }
 
-class StoreFragmentState extends State<StoreFragment> {
-  StoreService storeService = StoreService();
+class UserFragmentState extends State<UserFragment> {
+  UserService userService = UserService();
   ScrollController controller = ScrollController();
 
   @override
@@ -33,7 +38,6 @@ class StoreFragmentState extends State<StoreFragment> {
   void setState(fn) {
     if (mounted) super.setState(fn);
   }
-
   @override
   void dispose() {
     controller.dispose();
@@ -43,9 +47,9 @@ class StoreFragmentState extends State<StoreFragment> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBarWidget("Stores", showBack: false, elevation: 0),
-      body: StreamBuilder<List<StoreModel>>(
-        stream: storeService.getAllStores(),
+      appBar: appBarWidget(widget.role.validate() == '' ? "All User" : widget.role.validate(), showBack: false, elevation: 0),
+      body: StreamBuilder<List<UserModel>>(
+        stream: userService.getAllUsers(role: widget.role.validate()),
         builder: (_, snap) {
           if (snap.hasData) {
             return SingleChildScrollView(
@@ -53,9 +57,7 @@ class StoreFragmentState extends State<StoreFragment> {
               padding: EdgeInsets.only(left: 8, top: 8, right: 8, bottom: 70),
               child: LayoutBuilder(builder: (context, constrain) {
                 return Wrap(
-                  children: snap.data!.map((e) {
-                    return StoreWidget(data: e, width: constrain.maxWidth);
-                  }).toList(),
+                  children: snap.data!.map((e) => UserWidget(data: e, width: constrain.maxWidth)).toList(),
                 );
               }),
             );
@@ -75,11 +77,13 @@ class StoreFragmentState extends State<StoreFragment> {
           children: [
             Icon(Icons.add, color: white),
             4.width,
-            Text("Add Store", style: boldTextStyle(color: white)),
+            Text("Add User", style: boldTextStyle(color: white)),
           ],
         ),
       ).cornerRadiusWithClipRRect(defaultRadius).onTap(() {
-        AddStoreDetailScreen().launch(context);
+        // AddUserDialog
+        showInDialog(context, child: AddUserDialog());
+        // AddEditUserScreen().launch(context);
       }),
     );
   }

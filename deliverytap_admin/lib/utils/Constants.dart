@@ -3,6 +3,8 @@ const mAppName = 'DeliveryTap - Admin Panel';
 const currencySymbol = '₴';
 
 const mOneSignalAppId = 'ed874afc-6664-4ded-952e-79629817c026';
+const mOneSignalRestKey = 'MGI2Y2I1MGItMjMzMy00NmE1LTg0MDctMWUwM2RmNDMwZmU4';
+const mOneSignalChannelId = '9a4cc981-4c6b-4baf-8c5c-915f907446ae';
 
 const emailError = 'Invalid email address';
 
@@ -36,3 +38,31 @@ const STORE_CITY = 'STORE_CITY';
 const StreamSelectItem = 'StreamSelectItem';
 const StreamUpdateDrawer = 'StreamUpdateDrawer';
 //endregion
+
+/* Order Status */
+const NEW = 'New';
+const PACKING = 'Packing';
+const ASSIGNED = 'Assigned';
+const READY = 'Ready';
+const DELIVERING = 'Delivering';
+const COMPLETED = 'Completed';
+const CANCELED = 'Cancelled';
+
+/*payment status*/
+const PAYMENT_PENDING = 'Pending';
+const PAYMENT_COMPLETED = 'Completed';
+
+const mFirebaseStorageFilePath = 'category';
+
+/* Order Details */
+const ORDER_NUMBER = 'Order Number';
+const ORDER_DATETIME = 'Date and Time';
+const CONTACT_NUMBER = 'Contact';
+const USERNAME = 'User name';
+const USEREMAIL = 'User email';
+const AMOUNT = 'Amount';
+const ORDER_ITEM = 'Order Item';
+const PAYMENT_STATUS = 'Payment Status';
+const PLATFORM = 'Platform';
+
+double statisticsItemWidth = 230.0;

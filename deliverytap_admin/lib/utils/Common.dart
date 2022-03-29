@@ -1,6 +1,8 @@
-
+import 'dart:convert';
+import 'dart:io';
 import 'package:flutter/material.dart';
-
+import 'package:deliverytap_admin/utils/Constants.dart';
+import 'package:http/http.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 InputDecoration inputDecoration({String? hintText, String? labelText}) {
@@ -25,4 +27,60 @@ List<String> setSearchParam(String caseNumber) {
     caseSearchList.add(temp.toLowerCase());
   }
   return caseSearchList;
+}
+
+String getUserRoleText(String role) {
+  if (role.validate() == DELIVERY_BOY) {
+    return 'Delivery Boy';
+  } else if (role.validate() == USER) {
+    return 'User';
+  } else if (role.validate() == ADMIN) {
+    return 'Admin';
+  } else if (role.validate() == MANAGER) {
+    return 'Manager';
+  }
+  return role.validate();
+}
+
+Future<bool> sendPushNotifications({String? title, String? content, List<String>? listUser, String? orderId}) async {
+  Map dataMap = {};
+
+  if (orderId != null) {
+    dataMap.putIfAbsent('orderId', () => orderId);
+  }
+
+  Map req = {
+    'headings': {'en': title},
+    'contents': {'en': content},
+    //'big_picture': image.validate().isNotEmpty ? image.validate() : '',
+    //'large_icon': image.validate().isNotEmpty ? image.validate() : '',
+    //'small_icon': mAppIconUrl,
+    'data': dataMap,
+    'app_id': mOneSignalAppId,
+    'android_channel_id': mOneSignalChannelId,
+    "include_player_ids": listUser,
+  };
+  var header = {
+    HttpHeaders.authorizationHeader: 'Basic $mOneSignalRestKey',
+    HttpHeaders.contentTypeHeader: 'application/json; charset=utf-8',
+  };
+
+  Response res = await post(
+    Uri.parse('https://onesignal.com/api/v1/notifications'),
+    body: jsonEncode(req),
+    headers: header,
+  );
+
+  log(res.statusCode);
+  log(res.body);
+
+  if (res.statusCode.isSuccessful()) {
+    return true;
+  } else {
+    throw "";
+  }
+}
+
+extension IntExtenstion on int? {
+  String toAmount() => "$currencySymbol" + this.validate().toString();
 }

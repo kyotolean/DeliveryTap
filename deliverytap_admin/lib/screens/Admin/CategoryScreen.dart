@@ -1,3 +1,4 @@
+import 'package:deliverytap_admin/screens/Admin/components/NewCategoryDialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:deliverytap_admin/components/AppWidgets.dart';
@@ -137,7 +138,9 @@ class CategoryScreenState extends State<CategoryScreen> {
             Text("Add Category", style: boldTextStyle(color: white)),
           ],
         ),
-      ).cornerRadiusWithClipRRect(defaultRadius),
+      ).cornerRadiusWithClipRRect(defaultRadius).onTap(() {
+        showInDialog(context, child: NewCategoryDialog());
+      }),
     );
   }
 }
