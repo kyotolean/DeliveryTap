@@ -31,7 +31,6 @@ class StoreDBService extends BaseService {
   Stream<List<StoreModel>> storeByCategory(String? categoryName, {String? searchText, String? cityName}) {
     return ref
         .where(StoreKeys.catList, arrayContains: categoryName)
-        .where(StoreKeys.storeCity, isEqualTo: cityName)
         .where(CommonKeys.isDeleted, isEqualTo: false)
         .snapshots()
         .map((x) => x.docs.map((y) => StoreModel.fromJson(y.data() as Map<String, dynamic>)).toList());
