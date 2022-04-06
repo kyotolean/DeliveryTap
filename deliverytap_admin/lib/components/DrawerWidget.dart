@@ -54,7 +54,7 @@ class DrawerWidgetState extends State<DrawerWidget> {
           height: context.height(),
           child: Column(
             children: [
-              cachedImage('images/logo.png', width: 80, height: 80, fit: BoxFit.cover),
+              //cachedImage('images/logo.png', width: 80, height: 80, fit: BoxFit.cover),
               Column(
                 children: list.map((e) {
                   int cIndex = list.indexOf(e);

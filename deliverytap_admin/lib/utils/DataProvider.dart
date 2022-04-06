@@ -2,6 +2,7 @@ import 'package:deliverytap_admin/models/SideDrawerModel.dart';
 import 'package:deliverytap_admin/screens/Admin/CategoryScreen.dart';
 import 'package:deliverytap_admin/screens/Admin/StoreFragment.dart';
 import 'package:deliverytap_admin/screens/Admin/UserFragment.dart';
+import 'package:deliverytap_admin/screens/HomeFragment.dart';
 import 'package:deliverytap_admin/screens/Manager/CompletedOrderScreen.dart';
 import 'package:deliverytap_admin/screens/Manager/DeliveringOrderScreen.dart';
 import 'package:deliverytap_admin/screens/Manager/ItemsListScreen.dart';
@@ -40,7 +41,7 @@ List<SideDrawerModel> getDrawerList() {
       SideDrawerModel(title: 'Managers', widget: UserFragment(role: MANAGER)),
     ]));
   }
-  list.add(SideDrawerModel(img: 'images/ic_settings.png', title: 'Setting'));
+  list.add(SideDrawerModel(img: 'images/ic_settings.png', title: 'Setting', widget: HomeFragment()));
 
   return list;
 }

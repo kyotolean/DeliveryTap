@@ -52,7 +52,7 @@ class CategoryScreenState extends State<CategoryScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBarWidget("Food Categories", showBack: false, elevation: 0),
+      appBar: appBarWidget("Categories", showBack: false, elevation: 0),
       body: StreamBuilder<List<CategoryModel>>(
         stream: categoryService.getCategory(),
         builder: (_, snap) {
