@@ -39,7 +39,7 @@ class DashboardScreenState extends State<DashboardScreen> {
 
     setStatusBarColor(
       context.scaffoldBackgroundColor,
-      statusBarIconBrightness: Brightness.light,
+      statusBarIconBrightness: Brightness.dark,
     );
   }
 
@@ -61,7 +61,7 @@ class DashboardScreenState extends State<DashboardScreen> {
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: colorPrimary,
         unselectedItemColor: Colors.grey,
-        backgroundColor: scaffoldSecondaryDark,
+        backgroundColor: white,
         onTap: (index) {
           if (index == 1 || index == 3) {
             if (!appStore.isLoggedIn) {

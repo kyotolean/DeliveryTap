@@ -33,7 +33,7 @@ class CartScreenState extends State<CartScreen> {
   Future<void> init() async {
     await 1.seconds.delay;
     setStatusBarColor(
-      scaffoldColorDark,
+      colorPrimary,
     );
     setValue(DELIVERY_CHARGES, widget.deliveryCharge);
   }
@@ -41,8 +41,8 @@ class CartScreenState extends State<CartScreen> {
   @override
   void dispose() {
     setStatusBarColor(
-      scaffoldColorDark,
-      statusBarIconBrightness: Brightness.light,
+      colorPrimary,
+      statusBarIconBrightness: Brightness.dark,
     );
     super.dispose();
   }
@@ -55,7 +55,7 @@ class CartScreenState extends State<CartScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBarWidget("Cart", color: scaffoldColorDark, textColor: whiteColor),
+      appBar: appBarWidget("Cart", color: colorPrimary, textColor: whiteColor),
       body: Stack(
         children: [
           StreamBuilder<List<CartModel>>(

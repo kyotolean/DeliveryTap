@@ -40,8 +40,8 @@ class CartFragmentState extends State<CartFragment> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: scaffoldColorDark,
-      appBar: appBarWidget("Cart", showBack: false, elevation: 0, textSize: 28, color: scaffoldColorDark),
+      backgroundColor: Colors.white,
+      appBar: appBarWidget("Cart", showBack: false, elevation: 0, textSize: 28, color: Colors.white),
       body: Stack(
         children: [
           StreamBuilder<List<CartModel>>(

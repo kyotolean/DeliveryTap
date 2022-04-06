@@ -83,7 +83,7 @@ class AddReviewScreenState extends State<AddReviewScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBarWidget("Write a review", color: scaffoldColorDark, textColor: Colors.white),
+      appBar: appBarWidget("Write a review", color: colorPrimary, textColor: Colors.white),
       body: Stack(
         children: [
           Container(
@@ -107,7 +107,7 @@ class AddReviewScreenState extends State<AddReviewScreen> {
                             itemCount: 5,
                             maxRating: 5,
                             glow: false,
-                            unratedColor: context.iconColor,
+                            unratedColor: grey,
                             itemBuilder: (context, _) => Icon(Icons.star, color: Colors.amber),
                             itemSize: 40,
                             onRatingUpdate: (rating) {

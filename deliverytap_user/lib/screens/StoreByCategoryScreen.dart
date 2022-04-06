@@ -26,16 +26,16 @@ class StoreByCategoryScreenState extends State<StoreByCategoryScreen> {
 
   init() async {
     setStatusBarColor(
-      scaffoldColorDark,
-      statusBarIconBrightness: Brightness.light,
+      white,
+      statusBarIconBrightness: Brightness.dark,
     );
   }
 
   @override
   void dispose() {
     setStatusBarColor(
-      scaffoldColorDark,
-      statusBarIconBrightness: Brightness.light,
+      white,
+      statusBarIconBrightness: Brightness.dark,
     );
     super.dispose();
   }

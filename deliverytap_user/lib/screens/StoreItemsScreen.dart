@@ -37,7 +37,7 @@ class StoreItemsScreenState extends State<StoreItemsScreen> with SingleTickerPro
   Future<void> init() async {
     _tabController = TabController(length: 2, vsync: this);
 
-    setStatusBarColor(scaffoldColorDark, statusBarIconBrightness: Brightness.light);
+    setStatusBarColor(colorPrimary, statusBarIconBrightness: Brightness.light);
   }
 
   @override
@@ -47,7 +47,7 @@ class StoreItemsScreenState extends State<StoreItemsScreen> with SingleTickerPro
 
   @override
   void dispose() {
-    setStatusBarColor(scaffoldColorDark);
+    setStatusBarColor(Colors.white);
     super.dispose();
   }
 
@@ -57,7 +57,7 @@ class StoreItemsScreenState extends State<StoreItemsScreen> with SingleTickerPro
       child: Scaffold(
         appBar: appBarWidget(
           widget.store!.storeName.validate(),
-          color: scaffoldColorDark,
+          color: colorPrimary,
           textColor: whiteColor,
           actions: [
           ],

@@ -64,8 +64,8 @@ class MyOrderScreenState extends State<MyOrderScreen> {
   @override
   void dispose() {
     setStatusBarColor(
-      scaffoldColorDark,
-      statusBarIconBrightness: Brightness.light,
+      colorPrimary,
+      statusBarIconBrightness: Brightness.dark,
     );
     super.dispose();
   }
@@ -79,7 +79,7 @@ class MyOrderScreenState extends State<MyOrderScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: appBarWidget("Checkout", color: scaffoldColorDark, textColor: white, showBack: true),
+        appBar: appBarWidget("Checkout", color: colorPrimary, textColor: white, showBack: true),
         body: Column(
           children: [
             MyOrderUserInfoComponent(isOrder: true),

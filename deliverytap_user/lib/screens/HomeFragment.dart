@@ -48,7 +48,7 @@ class HomeFragmentState extends State<HomeFragment> with AfterLayoutMixin<HomeFr
     checkPermission();
     setStatusBarColor(
       context.scaffoldBackgroundColor,
-      statusBarIconBrightness: Brightness.light,
+      statusBarIconBrightness: Brightness.dark,
     );
   }
 
@@ -180,7 +180,7 @@ class HomeFragmentState extends State<HomeFragment> with AfterLayoutMixin<HomeFr
                     decoration: boxDecorationWithRoundedCorners(
                       borderRadius: BorderRadius.circular(30),
                       border: Border.all(color: viewLineColor),
-                      backgroundColor: scaffoldSecondaryDark,
+                      backgroundColor: Colors.white,
                     ),
                   ).expand(),
                 ],

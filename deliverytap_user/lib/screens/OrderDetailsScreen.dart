@@ -39,7 +39,7 @@ class OrderDetailsScreenState extends State<OrderDetailsScreen> {
 
   init() async {
     setStatusBarColor(
-      scaffoldColorDark,
+      Colors.white,
       statusBarIconBrightness: Brightness.light,
     );
     review();
@@ -79,7 +79,7 @@ class OrderDetailsScreenState extends State<OrderDetailsScreen> {
 
   @override
   void dispose() {
-    setStatusBarColor(scaffoldColorDark);
+    setStatusBarColor(Colors.white);
     super.dispose();
   }
 
@@ -170,7 +170,7 @@ class OrderDetailsScreenState extends State<OrderDetailsScreen> {
       ),
       bottomNavigationBar: Container(
         padding: EdgeInsets.only(bottom: 16),
-        color: scaffoldColorDark,
+        color: Colors.white,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [

@@ -78,6 +78,6 @@ class StoreItemComponentState extends State<StoreItemComponent> {
     ).onTap(() {
       hideKeyboard(context);
       StoreItemsScreen(store: widget.store).launch(context);
-    }, highlightColor: scaffoldColorDark);
+    }, highlightColor: context.cardColor);
   }
 }

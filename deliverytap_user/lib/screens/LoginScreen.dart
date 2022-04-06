@@ -68,7 +68,7 @@ class LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor:scaffoldColorDark,
+      backgroundColor:Colors.white,
       body: Stack(
         children: [
           SingleChildScrollView(
@@ -143,7 +143,7 @@ class LoginScreenState extends State<LoginScreen> {
         ],
       ),
       bottomSheet: Container(
-        color: scaffoldColorDark,
+        color: Colors.white,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [

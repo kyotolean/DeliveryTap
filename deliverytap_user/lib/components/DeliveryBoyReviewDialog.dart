@@ -87,7 +87,7 @@ class DeliveryBoyReviewDialogState extends State<DeliveryBoyReviewDialog> {
           }),
         ),
         Container(
-          color: scaffoldSecondaryDark,
+          color: white,
           padding: EdgeInsets.all(16),
           child: SingleChildScrollView(
             child: Column(
@@ -155,7 +155,7 @@ class DeliveryBoyReviewDialogState extends State<DeliveryBoyReviewDialog> {
                                 ),
                                 onChanged: (val) => setState(() => tags = val),
                                 isWrapped: true,
-                                itemConfig: ChipsChoiceItemConfig(selectedColor: colorPrimary, unselectedColor: grey),
+                                itemConfig: ChipsChoiceItemConfig(selectedColor: colorPrimary, unselectedColor: black),
                               ),
                               Divider(thickness: 3, height: 30),
                               Column(

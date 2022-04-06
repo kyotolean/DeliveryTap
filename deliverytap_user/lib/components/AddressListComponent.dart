@@ -66,7 +66,7 @@ class AddressListComponentState extends State<AddressListComponent> {
           decoration: boxDecorationWithShadow(
             borderRadius: radius(12),
             boxShadow: defaultBoxShadow(),
-            backgroundColor: scaffoldSecondaryDark,
+            backgroundColor: Colors.white,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

@@ -40,7 +40,7 @@ class RegisterScreenState extends State<RegisterScreen> {
   }
 
   Future<void> init() async {
-    setStatusBarColor(scaffoldColorDark);
+    setStatusBarColor(Colors.white);
 
     saveOneSignalPlayerId();
   }
@@ -68,7 +68,7 @@ class RegisterScreenState extends State<RegisterScreen> {
 
   @override
   void dispose() {
-    setStatusBarColor(scaffoldColorDark);
+    setStatusBarColor(Colors.white);
 
     super.dispose();
   }
@@ -81,7 +81,7 @@ class RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: scaffoldColorDark,
+      backgroundColor: Colors.white,
       appBar: appBarWidget("Register", color: context.cardColor),
       body: Container(
         child: Stack(
@@ -186,7 +186,7 @@ class RegisterScreenState extends State<RegisterScreen> {
         ),
       ),
       bottomSheet: Container(
-        color: scaffoldColorDark,
+        color: Colors.white,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [

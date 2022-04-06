@@ -137,7 +137,7 @@ class MyOrderBottomWidgetState extends State<MyOrderBottomWidget> {
   Widget build(BuildContext context) {
     return Container(
       decoration: boxDecorationWithRoundedCorners(
-        backgroundColor: context.cardColor,
+        backgroundColor: colorPrimary,
         borderRadius: radiusOnly(topRight: 16, topLeft: 16),
       ),
       padding: EdgeInsets.all(16),
@@ -169,8 +169,8 @@ class MyOrderBottomWidgetState extends State<MyOrderBottomWidget> {
           AppButton(
             width: context.width(),
             shapeBorder: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(30))),
-            child: Text("Place Order", style: boldTextStyle(color: white)),
-            color: colorPrimary,
+            child: Text("Place Order", style: boldTextStyle(color: colorPrimary)),
+            color: Colors.white,
             onTap: () async {
               if (appStore.addressModel == null) {
                 address();
