@@ -42,3 +42,8 @@ const ORDER_STATUS_COMPLETE = 'Completed';
 const ORDER_STATUS_CANCELLED = 'Cancelled';
 
 const DocLimit = 10;
+
+const ORDER_PAYMENT_METHOD = 'paymentMethod';
+const ORDER_PAYMENT_STATUS = 'paymentStatus';
+const ORDER_PAYMENT_RECEIVED = 'Received';
+const CASH_ON_DELIVERY = 'Cash on Delivery';

@@ -54,7 +54,7 @@ class MyApp extends StatelessWidget {
     return Observer(
       builder: (_) => MaterialApp(
         title: mAppName,
-        theme: AppTheme.darkTheme,
+        theme: AppTheme.theme,
         debugShowCheckedModeBanner: false,
         navigatorKey: navigatorKey,
         home: SplashScreen(),

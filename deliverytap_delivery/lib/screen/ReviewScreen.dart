@@ -45,7 +45,6 @@ class ReviewScreenState extends State<ReviewScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    commonCachedNetworkImage('images/Empty.png', height: 150, width: 150, fit: BoxFit.cover),
                     16.height,
                     Text('Review not found', style: boldTextStyle()).center(),
                   ],

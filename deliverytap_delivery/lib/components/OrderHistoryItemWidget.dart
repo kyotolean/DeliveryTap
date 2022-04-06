@@ -8,6 +8,7 @@ import 'package:intl/intl.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../screen/TrackingScreen.dart';
 import 'AppWidgets.dart';
 
 class OrderHistoryItemWidget extends StatefulWidget {
@@ -102,6 +103,16 @@ class OrderHistoryItemWidgetState extends State<OrderHistoryItemWidget> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
+                  AppButton(
+                    padding: EdgeInsets.symmetric(horizontal: 16),
+                    onTap: () async {
+                      await TrackingScreen(orderModel: widget.orderData).launch(context).catchError((e) {
+                        log(e.toString());
+                      });
+                    },
+                    child: Text("Track", style: boldTextStyle(color: Colors.white)),
+                    color: primaryColor,
+                  ).visible(widget.orderData!.orderStatus != ORDER_STATUS_COMPLETE),
                   Text(widget.orderData!.totalAmount.toCurrencyAmount(), maxLines: 1, overflow: TextOverflow.ellipsis, style: boldTextStyle(color: primaryColor, size: 18)),
                 ],
               )
