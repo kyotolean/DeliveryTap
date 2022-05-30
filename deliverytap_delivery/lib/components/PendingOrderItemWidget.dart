@@ -9,6 +9,7 @@ import 'package:nb_utils/nb_utils.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'AppWidgets.dart';
+import 'StoreInfoBottomSheet.dart';
 
 class PendingOrderItemWidget extends StatefulWidget {
   final OrderModel? orderData;
@@ -117,7 +118,13 @@ class PendingOrderItemWidgetState extends State<PendingOrderItemWidget> {
                       IconButton(
                         icon: Icon(Icons.info_outline, size: 25, color: blueButtonColor),
                         onPressed: () {
-
+                          showModalBottomSheet(
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(16), topRight: Radius.circular(16))),
+                            context: context,
+                            builder: (BuildContext context) {
+                              return StoreInfoBottomSheet(widget.orderData);
+                            },
+                          );
                         },
                       ),
                     ],

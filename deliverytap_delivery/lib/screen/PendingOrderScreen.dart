@@ -1,4 +1,3 @@
-import 'package:deliverytap_delivery/screen/OrderHistoryScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
@@ -11,6 +10,7 @@ import 'package:deliverytap_delivery/utils/ModelKey.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../main.dart';
+import 'TrackingScreen.dart';
 
 class PendingOrderScreen extends StatefulWidget {
   static String tag = '/OrderScreen';
@@ -87,7 +87,7 @@ class PendingOrderScreenState extends State<PendingOrderScreen> {
                                   }).then((res) async {
                                     appStore.setLoading(false);
 
-                                    await OrderHistoryScreen().launch(context);
+                                    await TrackingScreen(orderModel: orderData).launch(context);
                                   }).catchError((e) {
                                     appStore.setLoading(false);
                                     log(e);

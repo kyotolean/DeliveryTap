@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 application
-INJECTED from D:\dtDelivery\deliverytap_delivery\android\app\src\main\AndroidManifest.xml:3:4-33:19
+INJECTED from D:\dtDelivery\deliverytap_delivery\android\app\src\main\AndroidManifest.xml:9:4-42:19
 MERGED from [:cloud_firestore] D:\dtDelivery\deliverytap_delivery\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-13:19
 MERGED from [:cloud_firestore] D:\dtDelivery\deliverytap_delivery\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_auth] D:\dtDelivery\deliverytap_delivery\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-13:19
@@ -92,15 +92,16 @@ MERGED from [com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\
 	android:name
 		INJECTED from D:\dtDelivery\deliverytap_delivery\android\app\src\main\AndroidManifest.xml
 manifest
-ADDED from D:\dtDelivery\deliverytap_delivery\android\app\src\main\AndroidManifest.xml:1:1-34:12
-INJECTED from D:\dtDelivery\deliverytap_delivery\android\app\src\main\AndroidManifest.xml:1:1-34:12
-INJECTED from D:\dtDelivery\deliverytap_delivery\android\app\src\main\AndroidManifest.xml:1:1-34:12
-INJECTED from D:\dtDelivery\deliverytap_delivery\android\app\src\main\AndroidManifest.xml:1:1-34:12
-MERGED from D:\dtDelivery\deliverytap_delivery\android\app\src\main\AndroidManifest.xml:1:1-34:12
+ADDED from D:\dtDelivery\deliverytap_delivery\android\app\src\main\AndroidManifest.xml:1:1-43:12
+INJECTED from D:\dtDelivery\deliverytap_delivery\android\app\src\main\AndroidManifest.xml:1:1-43:12
+INJECTED from D:\dtDelivery\deliverytap_delivery\android\app\src\main\AndroidManifest.xml:1:1-43:12
+INJECTED from D:\dtDelivery\deliverytap_delivery\android\app\src\main\AndroidManifest.xml:1:1-43:12
+MERGED from D:\dtDelivery\deliverytap_delivery\android\app\src\main\AndroidManifest.xml:1:1-43:12
 MERGED from [:cloud_firestore] D:\dtDelivery\deliverytap_delivery\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
 MERGED from [:firebase_auth] D:\dtDelivery\deliverytap_delivery\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
 MERGED from [:firebase_core] D:\dtDelivery\deliverytap_delivery\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
 MERGED from [:nb_utils] D:\dtDelivery\deliverytap_delivery\build\nb_utils\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:maps_launcher] D:\dtDelivery\deliverytap_delivery\build\maps_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:geolocator_android] D:\dtDelivery\deliverytap_delivery\build\geolocator_android\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-17:12
 MERGED from [:google_maps_flutter] D:\dtDelivery\deliverytap_delivery\build\google_maps_flutter\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:flutter_plugin_android_lifecycle] D:\dtDelivery\deliverytap_delivery\build\flutter_plugin_android_lifecycle\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
@@ -210,14 +211,90 @@ INJECTED from D:\dtDelivery\deliverytap_delivery\android\app\src\debug\AndroidMa
 		INJECTED from D:\dtDelivery\deliverytap_delivery\android\app\src\debug\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\dtDelivery\deliverytap_delivery\android\app\src\main\AndroidManifest.xml
-		ADDED from D:\dtDelivery\deliverytap_delivery\android\app\src\main\AndroidManifest.xml:1:1-34:12
+		ADDED from D:\dtDelivery\deliverytap_delivery\android\app\src\main\AndroidManifest.xml:1:1-43:12
 		INJECTED from D:\dtDelivery\deliverytap_delivery\android\app\src\debug\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\dtDelivery\deliverytap_delivery\android\app\src\main\AndroidManifest.xml
-		ADDED from D:\dtDelivery\deliverytap_delivery\android\app\src\main\AndroidManifest.xml:1:1-34:12
+		ADDED from D:\dtDelivery\deliverytap_delivery\android\app\src\main\AndroidManifest.xml:1:1-43:12
 		INJECTED from D:\dtDelivery\deliverytap_delivery\android\app\src\debug\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\dtDelivery\deliverytap_delivery\android\app\src\main\AndroidManifest.xml:1:11-69
+uses-permission#android.permission.INTERNET
+ADDED from D:\dtDelivery\deliverytap_delivery\android\app\src\main\AndroidManifest.xml:4:5-66
+MERGED from D:\dtDelivery\deliverytap_delivery\android\app\src\main\AndroidManifest.xml:4:5-66
+MERGED from D:\dtDelivery\deliverytap_delivery\android\app\src\main\AndroidManifest.xml:4:5-66
+MERGED from [:google_sign_in] D:\dtDelivery\deliverytap_delivery\build\google_sign_in\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-67
+MERGED from [:google_sign_in] D:\dtDelivery\deliverytap_delivery\build\google_sign_in\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-67
+MERGED from [com.onesignal:OneSignal:4.6.6] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:16:5-67
+MERGED from [com.onesignal:OneSignal:4.6.6] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:16:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\afd7b43bd889fa0b77ebfe042dcac431\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:26:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\afd7b43bd889fa0b77ebfe042dcac431\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:26:5-67
+MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-firestore:24.0.1] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\b795ec276a2440e5d3c718ecabc4c7d2\jetified-firebase-firestore-24.0.1\AndroidManifest.xml:14:5-67
+MERGED from [com.google.firebase:firebase-firestore:24.0.1] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\b795ec276a2440e5d3c718ecabc4c7d2\jetified-firebase-firestore-24.0.1\AndroidManifest.xml:14:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:20.1.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\f0e8c4af6bafde84973cda4466a1e679\jetified-play-services-measurement-api-20.1.0\AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:20.1.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\f0e8c4af6bafde84973cda4466a1e679\jetified-play-services-measurement-api-20.1.0\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\544bb83cdfcc0c9ba48353730451aa98\jetified-firebase-installations-17.0.0\AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\544bb83cdfcc0c9ba48353730451aa98\jetified-firebase-installations-17.0.0\AndroidManifest.xml:11:5-67
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\071f32299edee94b84cbdef97955621b\jetified-play-services-maps-17.0.0\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\071f32299edee94b84cbdef97955621b\jetified-play-services-maps-17.0.0\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-measurement:20.1.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\03391d50a256ac963c05cf67bfc528a4\jetified-play-services-measurement-20.1.0\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement:20.1.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\03391d50a256ac963c05cf67bfc528a4\jetified-play-services-measurement-20.1.0\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\d2932d03cc382213224413346ce74ea0\jetified-play-services-cloud-messaging-17.0.0\AndroidManifest.xml:8:5-67
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\d2932d03cc382213224413346ce74ea0\jetified-play-services-cloud-messaging-17.0.0\AndroidManifest.xml:8:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\90878a1fe0d888fbce3e6b35520d70eb\jetified-play-services-measurement-impl-20.1.0\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\90878a1fe0d888fbce3e6b35520d70eb\jetified-play-services-measurement-impl-20.1.0\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\785d39496e67f69079007d1e8ba3b6df\jetified-play-services-measurement-sdk-api-20.1.0\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\785d39496e67f69079007d1e8ba3b6df\jetified-play-services-measurement-sdk-api-20.1.0\AndroidManifest.xml:23:5-67
+	android:name
+		ADDED from D:\dtDelivery\deliverytap_delivery\android\app\src\main\AndroidManifest.xml:4:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from D:\dtDelivery\deliverytap_delivery\android\app\src\main\AndroidManifest.xml:5:5-78
+MERGED from [:connectivity_plus] D:\dtDelivery\deliverytap_delivery\build\connectivity_plus\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-79
+MERGED from [:connectivity_plus] D:\dtDelivery\deliverytap_delivery\build\connectivity_plus\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-79
+MERGED from [com.onesignal:OneSignal:4.6.6] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:24:5-79
+MERGED from [com.onesignal:OneSignal:4.6.6] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\98564530026934e5d622580df22e15ca\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\98564530026934e5d622580df22e15ca\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\afd7b43bd889fa0b77ebfe042dcac431\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:25:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\afd7b43bd889fa0b77ebfe042dcac431\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:25:5-79
+MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-firestore:24.0.1] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\b795ec276a2440e5d3c718ecabc4c7d2\jetified-firebase-firestore-24.0.1\AndroidManifest.xml:13:5-79
+MERGED from [com.google.firebase:firebase-firestore:24.0.1] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\b795ec276a2440e5d3c718ecabc4c7d2\jetified-firebase-firestore-24.0.1\AndroidManifest.xml:13:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:20.1.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\f0e8c4af6bafde84973cda4466a1e679\jetified-play-services-measurement-api-20.1.0\AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:20.1.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\f0e8c4af6bafde84973cda4466a1e679\jetified-play-services-measurement-api-20.1.0\AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\544bb83cdfcc0c9ba48353730451aa98\jetified-firebase-installations-17.0.0\AndroidManifest.xml:10:5-79
+MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\544bb83cdfcc0c9ba48353730451aa98\jetified-firebase-installations-17.0.0\AndroidManifest.xml:10:5-79
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\071f32299edee94b84cbdef97955621b\jetified-play-services-maps-17.0.0\AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\071f32299edee94b84cbdef97955621b\jetified-play-services-maps-17.0.0\AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-measurement:20.1.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\03391d50a256ac963c05cf67bfc528a4\jetified-play-services-measurement-20.1.0\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement:20.1.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\03391d50a256ac963c05cf67bfc528a4\jetified-play-services-measurement-20.1.0\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\d2932d03cc382213224413346ce74ea0\jetified-play-services-cloud-messaging-17.0.0\AndroidManifest.xml:7:5-79
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\d2932d03cc382213224413346ce74ea0\jetified-play-services-cloud-messaging-17.0.0\AndroidManifest.xml:7:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\90878a1fe0d888fbce3e6b35520d70eb\jetified-play-services-measurement-impl-20.1.0\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\90878a1fe0d888fbce3e6b35520d70eb\jetified-play-services-measurement-impl-20.1.0\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\785d39496e67f69079007d1e8ba3b6df\jetified-play-services-measurement-sdk-api-20.1.0\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\785d39496e67f69079007d1e8ba3b6df\jetified-play-services-measurement-sdk-api-20.1.0\AndroidManifest.xml:24:5-79
+MERGED from [androidx.work:work-runtime:2.7.1] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:26:5-79
+MERGED from [androidx.work:work-runtime:2.7.1] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:26:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\6d617e86a184161bb8f234c5ee6e158c\jetified-transport-runtime-3.0.0\AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\6d617e86a184161bb8f234c5ee6e158c\jetified-transport-runtime-3.0.0\AndroidManifest.xml:22:5-79
+MERGED from [io.grpc:grpc-android:1.41.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\5ee4d160e5fc9e437c7e45a34b511c13\jetified-grpc-android-1.41.0\AndroidManifest.xml:11:5-79
+MERGED from [io.grpc:grpc-android:1.41.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\5ee4d160e5fc9e437c7e45a34b511c13\jetified-grpc-android-1.41.0\AndroidManifest.xml:11:5-79
+	android:name
+		ADDED from D:\dtDelivery\deliverytap_delivery\android\app\src\main\AndroidManifest.xml:5:22-76
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from D:\dtDelivery\deliverytap_delivery\android\app\src\main\AndroidManifest.xml:6:5-78
+MERGED from [:background_location] D:\dtDelivery\deliverytap_delivery\build\background_location\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-79
+MERGED from [:background_location] D:\dtDelivery\deliverytap_delivery\build\background_location\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-79
+	android:name
+		ADDED from D:\dtDelivery\deliverytap_delivery\android\app\src\main\AndroidManifest.xml:6:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from D:\dtDelivery\deliverytap_delivery\android\app\src\main\AndroidManifest.xml:7:5-75
+	android:name
+		ADDED from D:\dtDelivery\deliverytap_delivery\android\app\src\main\AndroidManifest.xml:7:22-73
 uses-sdk
 INJECTED from D:\dtDelivery\deliverytap_delivery\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\dtDelivery\deliverytap_delivery\android\app\src\main\AndroidManifest.xml
@@ -230,6 +307,8 @@ MERGED from [:firebase_core] D:\dtDelivery\deliverytap_delivery\build\firebase_c
 MERGED from [:firebase_core] D:\dtDelivery\deliverytap_delivery\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:nb_utils] D:\dtDelivery\deliverytap_delivery\build\nb_utils\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:nb_utils] D:\dtDelivery\deliverytap_delivery\build\nb_utils\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:maps_launcher] D:\dtDelivery\deliverytap_delivery\build\maps_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:maps_launcher] D:\dtDelivery\deliverytap_delivery\build\maps_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:geolocator_android] D:\dtDelivery\deliverytap_delivery\build\geolocator_android\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:geolocator_android] D:\dtDelivery\deliverytap_delivery\build\geolocator_android\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:google_maps_flutter] D:\dtDelivery\deliverytap_delivery\build\google_maps_flutter\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
@@ -438,34 +517,6 @@ INJECTED from D:\dtDelivery\deliverytap_delivery\android\app\src\debug\AndroidMa
 	android:minSdkVersion
 		INJECTED from D:\dtDelivery\deliverytap_delivery\android\app\src\main\AndroidManifest.xml
 		INJECTED from D:\dtDelivery\deliverytap_delivery\android\app\src\debug\AndroidManifest.xml
-uses-permission#android.permission.INTERNET
-ADDED from D:\dtDelivery\deliverytap_delivery\android\app\src\debug\AndroidManifest.xml:6:5-66
-MERGED from [:google_sign_in] D:\dtDelivery\deliverytap_delivery\build\google_sign_in\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-67
-MERGED from [:google_sign_in] D:\dtDelivery\deliverytap_delivery\build\google_sign_in\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-67
-MERGED from [com.onesignal:OneSignal:4.6.6] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:16:5-67
-MERGED from [com.onesignal:OneSignal:4.6.6] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:16:5-67
-MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\afd7b43bd889fa0b77ebfe042dcac431\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:26:5-67
-MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\afd7b43bd889fa0b77ebfe042dcac431\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:26:5-67
-MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-firestore:24.0.1] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\b795ec276a2440e5d3c718ecabc4c7d2\jetified-firebase-firestore-24.0.1\AndroidManifest.xml:14:5-67
-MERGED from [com.google.firebase:firebase-firestore:24.0.1] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\b795ec276a2440e5d3c718ecabc4c7d2\jetified-firebase-firestore-24.0.1\AndroidManifest.xml:14:5-67
-MERGED from [com.google.android.gms:play-services-measurement-api:20.1.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\f0e8c4af6bafde84973cda4466a1e679\jetified-play-services-measurement-api-20.1.0\AndroidManifest.xml:22:5-67
-MERGED from [com.google.android.gms:play-services-measurement-api:20.1.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\f0e8c4af6bafde84973cda4466a1e679\jetified-play-services-measurement-api-20.1.0\AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\544bb83cdfcc0c9ba48353730451aa98\jetified-firebase-installations-17.0.0\AndroidManifest.xml:11:5-67
-MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\544bb83cdfcc0c9ba48353730451aa98\jetified-firebase-installations-17.0.0\AndroidManifest.xml:11:5-67
-MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\071f32299edee94b84cbdef97955621b\jetified-play-services-maps-17.0.0\AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\071f32299edee94b84cbdef97955621b\jetified-play-services-maps-17.0.0\AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-measurement:20.1.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\03391d50a256ac963c05cf67bfc528a4\jetified-play-services-measurement-20.1.0\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement:20.1.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\03391d50a256ac963c05cf67bfc528a4\jetified-play-services-measurement-20.1.0\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\d2932d03cc382213224413346ce74ea0\jetified-play-services-cloud-messaging-17.0.0\AndroidManifest.xml:8:5-67
-MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\d2932d03cc382213224413346ce74ea0\jetified-play-services-cloud-messaging-17.0.0\AndroidManifest.xml:8:5-67
-MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\90878a1fe0d888fbce3e6b35520d70eb\jetified-play-services-measurement-impl-20.1.0\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\90878a1fe0d888fbce3e6b35520d70eb\jetified-play-services-measurement-impl-20.1.0\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\785d39496e67f69079007d1e8ba3b6df\jetified-play-services-measurement-sdk-api-20.1.0\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\785d39496e67f69079007d1e8ba3b6df\jetified-play-services-measurement-sdk-api-20.1.0\AndroidManifest.xml:23:5-67
-	android:name
-		ADDED from D:\dtDelivery\deliverytap_delivery\android\app\src\debug\AndroidManifest.xml:6:22-64
 service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [:cloud_firestore] D:\dtDelivery\deliverytap_delivery\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
 MERGED from [:firebase_auth] D:\dtDelivery\deliverytap_delivery\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
@@ -538,48 +589,10 @@ ADDED from [:url_launcher_android] D:\dtDelivery\deliverytap_delivery\build\url_
 		ADDED from [:url_launcher_android] D:\dtDelivery\deliverytap_delivery\build\url_launcher_android\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-71
 	android:name
 		ADDED from [:url_launcher_android] D:\dtDelivery\deliverytap_delivery\build\url_launcher_android\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-74
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [:connectivity_plus] D:\dtDelivery\deliverytap_delivery\build\connectivity_plus\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-79
-MERGED from [com.onesignal:OneSignal:4.6.6] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:24:5-79
-MERGED from [com.onesignal:OneSignal:4.6.6] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\72aebae513b4c5df0a89648343d39062\jetified-OneSignal-4.6.6\AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\98564530026934e5d622580df22e15ca\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:22:5-79
-MERGED from [com.google.firebase:firebase-messaging:23.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\98564530026934e5d622580df22e15ca\jetified-firebase-messaging-23.0.0\AndroidManifest.xml:22:5-79
-MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\afd7b43bd889fa0b77ebfe042dcac431\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:25:5-79
-MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\afd7b43bd889fa0b77ebfe042dcac431\jetified-transport-backend-cct-3.0.0\AndroidManifest.xml:25:5-79
-MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-auth:21.0.1] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\a019e4e63ad7a70d0f2aebf4e86fe327\jetified-firebase-auth-21.0.1\AndroidManifest.xml:24:5-79
-MERGED from [com.google.firebase:firebase-firestore:24.0.1] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\b795ec276a2440e5d3c718ecabc4c7d2\jetified-firebase-firestore-24.0.1\AndroidManifest.xml:13:5-79
-MERGED from [com.google.firebase:firebase-firestore:24.0.1] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\b795ec276a2440e5d3c718ecabc4c7d2\jetified-firebase-firestore-24.0.1\AndroidManifest.xml:13:5-79
-MERGED from [com.google.android.gms:play-services-measurement-api:20.1.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\f0e8c4af6bafde84973cda4466a1e679\jetified-play-services-measurement-api-20.1.0\AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-measurement-api:20.1.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\f0e8c4af6bafde84973cda4466a1e679\jetified-play-services-measurement-api-20.1.0\AndroidManifest.xml:23:5-79
-MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\544bb83cdfcc0c9ba48353730451aa98\jetified-firebase-installations-17.0.0\AndroidManifest.xml:10:5-79
-MERGED from [com.google.firebase:firebase-installations:17.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\544bb83cdfcc0c9ba48353730451aa98\jetified-firebase-installations-17.0.0\AndroidManifest.xml:10:5-79
-MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\071f32299edee94b84cbdef97955621b\jetified-play-services-maps-17.0.0\AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-maps:17.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\071f32299edee94b84cbdef97955621b\jetified-play-services-maps-17.0.0\AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-measurement:20.1.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\03391d50a256ac963c05cf67bfc528a4\jetified-play-services-measurement-20.1.0\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement:20.1.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\03391d50a256ac963c05cf67bfc528a4\jetified-play-services-measurement-20.1.0\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\d2932d03cc382213224413346ce74ea0\jetified-play-services-cloud-messaging-17.0.0\AndroidManifest.xml:7:5-79
-MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\d2932d03cc382213224413346ce74ea0\jetified-play-services-cloud-messaging-17.0.0\AndroidManifest.xml:7:5-79
-MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\90878a1fe0d888fbce3e6b35520d70eb\jetified-play-services-measurement-impl-20.1.0\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-impl:20.1.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\90878a1fe0d888fbce3e6b35520d70eb\jetified-play-services-measurement-impl-20.1.0\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\785d39496e67f69079007d1e8ba3b6df\jetified-play-services-measurement-sdk-api-20.1.0\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:20.1.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\785d39496e67f69079007d1e8ba3b6df\jetified-play-services-measurement-sdk-api-20.1.0\AndroidManifest.xml:24:5-79
-MERGED from [androidx.work:work-runtime:2.7.1] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:26:5-79
-MERGED from [androidx.work:work-runtime:2.7.1] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\7dbe88f7b6e9827bdd9ac54c043689c6\work-runtime-2.7.1\AndroidManifest.xml:26:5-79
-MERGED from [com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\6d617e86a184161bb8f234c5ee6e158c\jetified-transport-runtime-3.0.0\AndroidManifest.xml:22:5-79
-MERGED from [com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\6d617e86a184161bb8f234c5ee6e158c\jetified-transport-runtime-3.0.0\AndroidManifest.xml:22:5-79
-MERGED from [io.grpc:grpc-android:1.41.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\5ee4d160e5fc9e437c7e45a34b511c13\jetified-grpc-android-1.41.0\AndroidManifest.xml:11:5-79
-MERGED from [io.grpc:grpc-android:1.41.0] C:\Users\Yenot\.gradle\caches\transforms-2\files-2.1\5ee4d160e5fc9e437c7e45a34b511c13\jetified-grpc-android-1.41.0\AndroidManifest.xml:11:5-79
-	android:name
-		ADDED from [:connectivity_plus] D:\dtDelivery\deliverytap_delivery\build\connectivity_plus\intermediates\library_manifest\debug\AndroidManifest.xml:7:22-76
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
 ADDED from [:background_location] D:\dtDelivery\deliverytap_delivery\build\background_location\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-81
 	android:name
 		ADDED from [:background_location] D:\dtDelivery\deliverytap_delivery\build\background_location\intermediates\library_manifest\debug\AndroidManifest.xml:7:22-78
-uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from [:background_location] D:\dtDelivery\deliverytap_delivery\build\background_location\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-79
-	android:name
-		ADDED from [:background_location] D:\dtDelivery\deliverytap_delivery\build\background_location\intermediates\library_manifest\debug\AndroidManifest.xml:8:22-76
 service#com.almoullim.background_location.LocationUpdatesService
 ADDED from [:background_location] D:\dtDelivery\deliverytap_delivery\build\background_location\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-17:37
 	android:enabled

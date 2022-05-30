@@ -11,6 +11,8 @@ import 'package:deliverytap_delivery/model/OrderModel.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:onesignal_flutter/onesignal_flutter.dart';
 
+import 'ProfileScreen.dart';
+
 class DashboardScreen extends StatefulWidget {
   static String tag = '/DashboardScreen';
 
@@ -25,7 +27,7 @@ class DashboardScreenState extends State<DashboardScreen> with AfterLayoutMixin<
     PendingOrderScreen(),
     OrderHistoryScreen(),
     ReviewScreen(),
-    PendingOrderScreen(),
+    ProfileScreen(),
   ];
 
   @override

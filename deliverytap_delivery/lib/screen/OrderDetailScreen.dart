@@ -78,6 +78,12 @@ class OrderDetailScreenState extends State<OrderDetailScreen> {
                         border: Border.all(color: context.dividerColor),
                         borderRadius: BorderRadius.circular(16),
                       ),
+                      child: commonCachedNetworkImage(
+                        widget.orderModel!.orderItems![index].image!.validate(),
+                        height: 60,
+                        width: 60,
+                        fit: BoxFit.cover,
+                      ).cornerRadiusWithClipRRect(12),
                     ),
                     8.width,
                     Column(
@@ -98,7 +104,7 @@ class OrderDetailScreenState extends State<OrderDetailScreen> {
                         ),
                         4.height,
                         createRichText(list: [
-                          TextSpan(text: '${'Restaurant'} :- ', style: secondaryTextStyle()),
+                          TextSpan(text: '${'Store'} :- ', style: secondaryTextStyle()),
                           TextSpan(text: widget.orderModel!.storeName.validate(), style: secondaryTextStyle()),
                         ])
                       ],

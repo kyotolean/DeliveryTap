@@ -58,3 +58,10 @@ class OrderItemsKey {
   static String itemPrice = 'itemPrice';
   static String qty = 'qty';
 }
+
+class StoreKey {
+  static String storeAddress = 'storeAddress';
+  static String photoUrl = 'photoUrl';
+  static String storeName = 'storeName';
+  static String storeContact = 'storeContact';
+}

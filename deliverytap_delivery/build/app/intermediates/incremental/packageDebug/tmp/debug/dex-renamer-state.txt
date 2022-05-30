@@ -1,4 +1,4 @@
-#Wed Apr 06 21:55:48 EEST 2022
+#Tue May 17 08:51:04 EEST 2022
 path.4=classes_0.dex
 path.3=classes3.dex
 path.2=classes2.dex
@@ -19,6 +19,7 @@ base.8=D\:\\dtDelivery\\deliverytap_delivery\\build\\app\\intermediates\\dex\\de
 base.7=D\:\\dtDelivery\\deliverytap_delivery\\build\\app\\intermediates\\dex\\debug\\mergeLibDexDebug\\classes_11.dex
 base.6=D\:\\dtDelivery\\deliverytap_delivery\\build\\app\\intermediates\\dex\\debug\\mergeLibDexDebug\\classes_10.dex
 base.5=D\:\\dtDelivery\\deliverytap_delivery\\build\\app\\intermediates\\dex\\debug\\mergeLibDexDebug\\classes_1.dex
+renamed.23=classes24.dex
 renamed.22=classes23.dex
 renamed.21=classes22.dex
 renamed.20=classes21.dex
@@ -42,6 +43,7 @@ base.14=D\:\\dtDelivery\\deliverytap_delivery\\build\\app\\intermediates\\dex\\d
 base.19=D\:\\dtDelivery\\deliverytap_delivery\\build\\app\\intermediates\\dex\\debug\\mergeLibDexDebug\\classes_6.dex
 base.18=D\:\\dtDelivery\\deliverytap_delivery\\build\\app\\intermediates\\dex\\debug\\mergeLibDexDebug\\classes_5.dex
 base.20=D\:\\dtDelivery\\deliverytap_delivery\\build\\app\\intermediates\\dex\\debug\\mergeLibDexDebug\\classes_7.dex
+base.23=D\:\\dtDelivery\\deliverytap_delivery\\build\\app\\intermediates\\dex\\debug\\mergeLibDexDebug\\classes_19.dex
 base.22=D\:\\dtDelivery\\deliverytap_delivery\\build\\app\\intermediates\\dex\\debug\\mergeLibDexDebug\\classes_9.dex
 base.21=D\:\\dtDelivery\\deliverytap_delivery\\build\\app\\intermediates\\dex\\debug\\mergeLibDexDebug\\classes_8.dex
 renamed.3=classes4.dex
@@ -66,5 +68,6 @@ base.12=D\:\\dtDelivery\\deliverytap_delivery\\build\\app\\intermediates\\dex\\d
 path.20=classes_7.dex
 base.11=D\:\\dtDelivery\\deliverytap_delivery\\build\\app\\intermediates\\dex\\debug\\mergeLibDexDebug\\classes_15.dex
 base.10=D\:\\dtDelivery\\deliverytap_delivery\\build\\app\\intermediates\\dex\\debug\\mergeLibDexDebug\\classes_14.dex
+path.23=classes_19.dex
 path.21=classes_8.dex
 path.22=classes_9.dex

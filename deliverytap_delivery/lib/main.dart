@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:deliverytap_delivery/services/StoreService.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -25,6 +26,7 @@ OrderService orderServices = OrderService();
 UserService userService = UserService();
 AuthService authService = AuthService();
 ReviewService reviewService = ReviewService();
+StoreService storeService = StoreService();
 
 
 void main() async {
@@ -34,6 +36,11 @@ void main() async {
   await initialize();
   defaultLoaderAccentColorGlobal = primaryColor;
   defaultCurrencySymbol = currencySymbol;
+
+  appStore.setLoggedIn(getBoolAsync(IS_LOGGED_IN));
+  if (appStore.isLoggedIn) {
+    appStore.setUserCurrentCity(getStringAsync(CITY));
+  }
 
   await OneSignal.shared.setAppId(mOneSignalAppId);
 
