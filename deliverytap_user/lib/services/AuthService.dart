@@ -98,3 +98,36 @@ Future<void> saveUserDetails(UserModel userModel, String loginType) async {
     CommonKeys.updatedAt: DateTime.now(),
   }, userModel.uid);
 }
+
+Future<void> logout() async {
+  userDBService.updateDocument({
+    UserKeys.oneSignalPlayerId: '',
+    CommonKeys.updatedAt: DateTime.now(),
+  }, appStore.userId).then((value) async {
+    //
+  }).catchError((e) {
+    throw e;
+  });
+  await removeKey(IS_NOTIFICATION_ON);
+  await removeKey(USER_HOME_ADDRESS);
+  await removeKey(USER_ROLE);
+  await removeKey(TESTER);
+
+  appStore.setAddressModel(null);
+  appStore.setLoggedIn(false);
+  appStore.setUserId('');
+  appStore.setFullName('');
+  appStore.setUserEmail('');
+  appStore.setUserProfile('');
+  appStore.setCityName('');
+
+  appStore.clearCart();
+}
+
+Future<void> forgotPassword({required String email}) async {
+  await auth.sendPasswordResetEmail(email: email).then((value) {
+    //
+  }).catchError((error) {
+    throw error.toString();
+  });
+}

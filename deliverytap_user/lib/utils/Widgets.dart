@@ -48,3 +48,13 @@ Widget viewCartWidget({required BuildContext context, String? totalItemLength, F
         ),
       ).onTap(onTap, highlightColor: scaffoldColorDark));
 }
+
+InputDecoration labelInputDecoration({String? labelText}) {
+  return InputDecoration(
+    focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(4)), borderSide: BorderSide(width: 1, color: colorPrimary)),
+    errorBorder: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(4)), borderSide: BorderSide(width: 1, color: colorPrimary)),
+    errorStyle: TextStyle(color: colorPrimary.withOpacity(0.5)),
+    labelStyle: TextStyle(color: colorPrimary.withOpacity(0.5)),
+    labelText: labelText,
+  );
+}

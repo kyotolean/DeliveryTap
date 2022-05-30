@@ -6,7 +6,9 @@ import 'package:deliverytap_user/utils/Colors.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:nb_utils/nb_utils.dart';
 
+import '../components/MapAddressItemComponent.dart';
 import '../main.dart';
+import 'MapAddressScreen.dart';
 
 // ignore: must_be_immutable
 class MyAddressScreen extends StatefulWidget {
@@ -52,6 +54,19 @@ class MyAddressScreenState extends State<MyAddressScreen> {
         body: SingleChildScrollView(
           child: Column(
             children: [
+              SettingItemWidget(
+                padding: EdgeInsets.only(top: 16, right: 16, left: 16, bottom: 8),
+                leading: Icon(Icons.add, color: colorPrimary),
+                title: "Add address",
+                titleTextStyle: primaryTextStyle(color: colorPrimary),
+                onTap: () async {
+                  if (userLatitude != null) {
+                    MapAddressScreen(userLatitude: userLatitude, userLongitude: userLongitude).launch(context);
+                  } else {
+                    getCurrentUserLocation();
+                  }
+                },
+              ),
               Stack(
                 children: [
                   StreamBuilder<UserModel>(

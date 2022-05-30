@@ -1,6 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tapforce.deliverytap_user">
-   <application
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
         android:label="deliverytap_user"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
@@ -30,5 +34,8 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDumgXBzTKboNZFrsvgUWjWKJryMtTynPI" />
     </application>
 </manifest>

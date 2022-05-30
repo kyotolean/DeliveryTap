@@ -53,3 +53,5 @@ const CASH_ON_DELIVERY = 'COD';
 
 /// Payment Status
 const PAYMENT_STATUS_PENDING = 'Pending';
+
+const mFirebaseStorageFilePath = 'images';

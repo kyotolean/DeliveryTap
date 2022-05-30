@@ -5,6 +5,8 @@ import 'package:deliverytap_user/models/AddressModel.dart';
 import 'package:deliverytap_user/utils/Colors.dart';
 import 'package:nb_utils/nb_utils.dart';
 
+import '../screens/MyAddressScreen.dart';
+
 // ignore: must_be_immutable
 class MyOrderUserInfoComponent extends StatefulWidget {
   static String tag = '/MyOrderUserInfoComponent';
@@ -73,7 +75,13 @@ class MyOrderUserInfoComponentState extends State<MyOrderUserInfoComponent> {
             appStore.addressModel == null ? "Select Address" : "Change Address",
             style: secondaryTextStyle(color: colorPrimary),
           ),
-        ),
+        ).onTap(() async {
+          AddressModel? data = await MyAddressScreen(isOrder: widget.isOrder).launch(context);
+          if (data != null) {
+            appStore.setAddressModel(data);
+          }
+          setState(() {});
+        }),
       ],
     ).paddingOnly(left: 16, right: 16, top: 16);
   }

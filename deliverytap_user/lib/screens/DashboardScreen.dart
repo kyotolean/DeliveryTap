@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:deliverytap_user/screens/ProfileFragment.dart';
 import 'package:flutter/material.dart';
 import 'package:deliverytap_user/main.dart';
 import 'package:deliverytap_user/utils/Colors.dart';
@@ -25,7 +26,7 @@ class DashboardScreenState extends State<DashboardScreen> {
     HomeFragment(),
     OrderFragment(),
     CartFragment(),
-    HomeFragment()
+    ProfileFragment()
   ];
 
   @override
