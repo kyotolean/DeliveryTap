@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 
 import 'package:nb_utils/nb_utils.dart';
 
+import 'StatisticsItemWidget.dart';
+
 Widget cachedImage(String? url, {double? height, double? width, BoxFit? fit, AlignmentGeometry? alignment, bool usePlaceholderIfUrlEmpty = true, double? radius}) {
   if (url.validate().isEmpty) {
     return placeHolderWidget(height: height, width: width, fit: fit, alignment: alignment, radius: radius);
@@ -36,3 +38,15 @@ Widget placeHolderWidget({double? height, double? width, BoxFit? fit, AlignmentG
   ).cornerRadiusWithClipRRect(radius ?? defaultRadius);
 }
 
+Widget streamBuilderWidget({Stream? stream, String? title}) {
+  return StreamBuilder(
+    stream: stream,
+    builder: (_, AsyncSnapshot? snap) {
+      if (snap!.hasData) {
+        return StatisticsItemWidget(count: snap.data!.length, title: title);
+      } else {
+        return SizedBox();
+      }
+    },
+  );
+}

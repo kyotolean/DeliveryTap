@@ -8,6 +8,8 @@ const mOneSignalChannelId = '9a4cc981-4c6b-4baf-8c5c-915f907446ae';
 
 const emailError = 'Invalid email address';
 
+const googleMapKey = 'AIzaSyDumgXBzTKboNZFrsvgUWjWKJryMtTynPI';
+
 const IS_LOGGED_IN = 'IS_LOGGED_IN';
 
 const USER_ID = 'USER_ID';
@@ -66,3 +68,7 @@ const PAYMENT_STATUS = 'Payment Status';
 const PLATFORM = 'Platform';
 
 double statisticsItemWidth = 230.0;
+
+const Week = 'Week';
+const Month = 'Month';
+const Year = 'Year';

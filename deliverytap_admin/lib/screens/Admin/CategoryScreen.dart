@@ -88,7 +88,11 @@ class CategoryScreenState extends State<CategoryScreen> {
                                   children: [
                                     Icon(Icons.edit, size: 18, color: grey),
                                     4.width,
-                                    Text("Update", style: primaryTextStyle()),
+                                    Text(
+                                        "Update", style: primaryTextStyle()
+                                    ).onTap(() async {
+                                        showInDialog(context, child: NewCategoryDialog(data: e));
+                                    }),
                                   ],
                                 ),
                                 8.width,

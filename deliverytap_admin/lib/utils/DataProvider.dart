@@ -17,7 +17,7 @@ import 'Constants.dart';
 List<SideDrawerModel> getDrawerList() {
   List<SideDrawerModel> list = [];
 
-  list.add(SideDrawerModel(img: 'images/ic_home.png', title: 'Dashboard', widget: CategoryScreen()));
+  list.add(SideDrawerModel(img: 'images/ic_home.png', title: 'Dashboard', widget: HomeFragment()));
 
   list.add(SideDrawerModel(img: 'images/ic_order.png', title: 'Order', widget: NewOrderScreen(), items: [
     SideDrawerModel(title: "New Orders", widget: NewOrderScreen()),

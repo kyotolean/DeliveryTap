@@ -38,7 +38,7 @@ class StoreDetailScreenState extends State<StoreDetailScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appBarWidget(
-        'Restaurant Details',
+        'Store Details',
         showBack: false,
         elevation: 0,
         actions: [

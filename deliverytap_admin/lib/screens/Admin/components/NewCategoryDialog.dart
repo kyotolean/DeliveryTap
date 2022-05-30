@@ -45,7 +45,7 @@ class NewCategoryDialogState extends State<NewCategoryDialog> {
       inputPrimaryColor.text = widget.data!.color.validate();
       pickerColor = widget.data!.color.toColor();
     } else {
-      inputPrimaryColor.text = pickerColor.toString();
+      inputPrimaryColor.text = "#FF674FFF";
     }
   }
 

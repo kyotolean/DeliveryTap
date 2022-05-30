@@ -5,6 +5,8 @@ import 'package:deliverytap_admin/utils/Constants.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../main.dart';
+import 'Admin/components/AdminHomeWidget.dart';
+import 'Manager/components/ManagerHomeWidget.dart';
 import 'SignInScreen.dart';
 
 class HomeFragment extends StatefulWidget {
@@ -102,6 +104,11 @@ class HomeFragmentState extends State<HomeFragment> {
         ],
       )
           : null,
+      body: SingleChildScrollView(
+        padding: EdgeInsets.all(16),
+        controller: controller,
+        child: getBoolAsync(IS_ADMIN) ? AdminHomeWidget() : ManagerHomeWidget(),
+      ),
     );
   }
 }

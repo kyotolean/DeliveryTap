@@ -81,6 +81,14 @@ Future<bool> sendPushNotifications({String? title, String? content, List<String>
   }
 }
 
+extension ScreenSize on BuildContext {
+  bool isMobile() => MediaQuery.of(this).size.width < 850;
+
+  bool isTab() => MediaQuery.of(this).size.width < 1100 && MediaQuery.of(this).size.width >= 850;
+
+  bool isDesk() => MediaQuery.of(this).size.width >= 1100;
+}
+
 extension IntExtenstion on int? {
   String toAmount() => "$currencySymbol" + this.validate().toString();
 }

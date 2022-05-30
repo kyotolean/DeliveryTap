@@ -1,3 +1,4 @@
+import 'package:deliverytap_admin/screens/HomeFragment.dart';
 import 'package:flutter/material.dart';
 import 'package:deliverytap_admin/components/AppWidgets.dart';
 import 'package:deliverytap_admin/components/DrawerWidget.dart';
@@ -24,7 +25,7 @@ class DashboardScreenState extends State<DashboardScreen> with AfterLayoutMixin<
   String? title;
   List<SideDrawerModel> drawerList = getDrawerList();
 
-  Widget? currentWidget = CategoryScreen();
+  Widget? currentWidget = HomeFragment();
   SideDrawerModel model = SideDrawerModel();
 
   @override

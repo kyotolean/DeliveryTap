@@ -30,7 +30,7 @@ class AddStoreDetailScreen extends StatefulWidget {
 }
 
 class AddStoreDetailScreenState extends State<AddStoreDetailScreen> {
-  //final kGoogleApiKey = googleMapKey;
+  final kGoogleApiKey = googleMapKey;
 
   GlobalKey<FormState> _form = GlobalKey<FormState>();
   ScrollController controller = ScrollController();
@@ -219,7 +219,7 @@ class AddStoreDetailScreenState extends State<AddStoreDetailScreen> {
     }
   }
 
-  /*Future<GeoPoint?> getGeoPoint(String address) async {
+  Future<GeoPoint?> getGeoPoint(String address) async {
     String url = 'https://maps.google.com/maps/api/geocode/json?key=$googleMapKey&address=${Uri.encodeComponent(address)}';
     Response res = await get(Uri.parse(url));
 
@@ -228,34 +228,27 @@ class AddStoreDetailScreenState extends State<AddStoreDetailScreen> {
 
       if (addressModel.results!.isNotEmpty) {
         AddressResult addressResult = addressModel.results!.first;
-        restaurantAddress = addressResult.formatted_address;
+        storeAddress = addressResult.formatted_address;
 
         addressResult.address_components!.forEach((element) {
           if (element.types!.contains('locality') || element.types!.contains('sublocality')) {
-            restaurantCity = element.long_name;
+            storeCity = element.long_name;
           }
           if (element.types!.contains('administrative_area_level_1')) {
-            restaurantState = element.long_name;
+            storeState = element.long_name;
           }
         });
 
-        restaurantGeoPoint = GeoPoint(addressResult.geometry!.location!.lat!, addressResult.geometry!.location!.lng!);
-        restAddressCont.text = restaurantAddress!;
+        storeGeoPoint = GeoPoint(addressResult.geometry!.location!.lat!, addressResult.geometry!.location!.lng!);
+        storeAddressCont.text = storeAddress!;
 
-        return restaurantGeoPoint;
+        return storeGeoPoint;
       } else {
         throw 'Location Not found';
       }
     } else {
-      throw appStore.translate('something_went_wrong');
+      throw "Something Went Wrong";
     }
-  }*/
-
-  Future<GeoPoint?> getGeoPoint(String address) async {
-    storeGeoPoint = GeoPoint(49.50171, 24.01243);
-    storeAddress = "Lviv, Doroshenka 28";
-    storeAddressCont.text = storeAddress!;
-    storeCity = "Lviv";
   }
 
   @override
