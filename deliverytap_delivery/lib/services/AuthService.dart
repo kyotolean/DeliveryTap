@@ -5,21 +5,39 @@ import 'package:deliverytap_delivery/model/UserModel.dart';
 import 'package:deliverytap_delivery/utils/Constants.dart';
 import 'package:deliverytap_delivery/utils/ModelKey.dart';
 import 'package:nb_utils/nb_utils.dart';
+import 'package:deliverytap_delivery/screen/LoginScreen.dart';
 
 class AuthService {
   static FirebaseAuth _auth = FirebaseAuth.instance;
 
-  Future<UserModel> signUpWithEmailPassword({required String email, required String password, String? displayName, String? number}) async {
-    return await _auth.createUserWithEmailAndPassword(email: email, password: password).then((value) async {
-      return await signInWithEmailPassword(email: value.user!.email!, password: password, displayName: displayName, number: number);
+  Future<UserModel> signUpWithEmailPassword(
+      {required String email,
+      required String password,
+      String? displayName,
+      String? number}) async {
+    return await _auth
+        .createUserWithEmailAndPassword(email: email, password: password)
+        .then((value) async {
+      return await signInWithEmailPassword(
+          email: value.user!.email!,
+          password: password,
+          displayName: displayName,
+          number: number);
     }).catchError((error) {
       throw error.toString();
     });
   }
 
-  Future<UserModel> signInWithEmailPassword({required String email, required String password, String? displayName, String? number}) async {
-    return await _auth.signInWithEmailAndPassword(email: email, password: password).then((value) async {
-      return await loginFromFirebaseUser(value.user!, LoginTypeApp, fullName: displayName, number: number);
+  Future<UserModel> signInWithEmailPassword(
+      {required String email,
+      required String password,
+      String? displayName,
+      String? number}) async {
+    return await _auth
+        .signInWithEmailAndPassword(email: email, password: password)
+        .then((value) async {
+      return await loginFromFirebaseUser(value.user!, LoginTypeApp,
+          fullName: displayName, number: number);
     }).catchError((error) async {
       if (!await isNetworkAvailable()) {
         throw errorInternetNotAvailable;
@@ -29,7 +47,8 @@ class AuthService {
     });
   }
 
-  Future<UserModel> loginFromFirebaseUser(User currentUser, String loginType, {String? fullName, String? number}) async {
+  Future<UserModel> loginFromFirebaseUser(User currentUser, String loginType,
+      {String? fullName, String? number}) async {
     UserModel userModel = UserModel();
 
     if (await userService.isUserExist(currentUser.email, loginType)) {
@@ -62,7 +81,9 @@ class AuthService {
       userModel.address = '';
       userModel.availabilityStatus = true;
 
-      await userService.addDocumentWithCustomId(currentUser.uid, userModel.toJson()).then((value) {
+      await userService
+          .addDocumentWithCustomId(currentUser.uid, userModel.toJson())
+          .then((value) {
         //
       }).catchError((e) {
         throw e;
@@ -93,6 +114,31 @@ class AuthService {
       UserKey.availabilityStatus: true,
       CommonKey.updatedAt: DateTime.now(),
     });
+  }
+
+  Future<void> logout(BuildContext context) async {
+    userService.updateDocument(getStringAsync(USER_ID), {
+      UserKey.oneSignalPlayerId: '',
+      CommonKey.updatedAt: DateTime.now(),
+    }).then((value) async {
+      //
+    }).catchError((e) {
+      toast(e.toString());
+    });
+
+    await removeKey(USER_DISPLAY_NAME);
+    await removeKey(USER_EMAIL);
+    await removeKey(USER_PHOTO_URL);
+    await removeKey(USER_ID);
+    await removeKey(LOGIN_TYPE);
+    await removeKey(PLAYER_ID);
+    await removeKey(USER_CHECK);
+    await removeKey(IS_TESTER);
+    await removeKey(PHONE_NUMBER);
+
+    appStore.setLoggedIn(false);
+
+    LoginScreen().launch(context, isNewTask: true);
   }
 
   Future<void> forgotPassword({required String email}) async {
