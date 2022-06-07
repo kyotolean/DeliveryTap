@@ -1,0 +1,2 @@
+com/example/maps_launcher/BuildConfig.java
+ com.example.maps_launcher.BuildConfig

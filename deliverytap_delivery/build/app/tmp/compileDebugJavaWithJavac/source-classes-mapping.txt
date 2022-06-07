@@ -1,0 +1,4 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/tapforce/deliverytap_delivery/BuildConfig.java
+ com.tapforce.deliverytap_delivery.BuildConfig
