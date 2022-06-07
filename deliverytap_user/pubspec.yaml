@@ -1,0 +1,82 @@
+name: deliverytap_user
+description: A new Flutter project.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.15.1 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Base
+  cupertino_icons: ^1.0.4
+  nb_utils: ^4.4.10
+  intl: ^0.17.0
+  google_fonts: ^2.2.0
+
+  # FIREBASE PACKAGES
+  firebase_core: ^1.10.6
+  firebase_auth: ^3.3.4
+  cloud_firestore: ^3.1.5
+  firebase_analytics: ^9.0.4
+  firebase_remote_config: ^2.0.2
+  firebase_storage: ^10.2.4
+
+  # CONNECTIVITY
+  share: ^2.0.4
+  url_launcher: ^6.0.17
+  package_info: ^2.0.2
+
+  # STATE MANAGEMENT
+  mobx: ^2.0.6+1
+  flutter_mobx: ^2.0.3+2
+
+  # MAP
+  google_maps_flutter: ^2.1.1
+  geolocator: ^8.0.1
+  geocoding: ^2.0.1
+
+  # UI
+  flutter_rating_bar: 4.0.0
+  flutter_staggered_grid_view: ^0.6.0
+  flutter_vector_icons: 1.0.0
+  country_code_picker: ^2.0.2
+  sliding_up_panel: 2.0.0+1
+
+  # WEB TOOLS
+  html: ^0.15.0
+
+  # AUTHENTICATION
+  google_sign_in: ^5.2.1
+
+  # PUSH NOTIFICATION
+  onesignal_flutter: ^3.2.8
+
+  # IMAGES
+  image_picker: ^0.8.4+4
+  cached_network_image: ^3.2.0
+
+  #PAGINATON
+  paginate_firestore: ^1.0.3
+
+  # APP LOCATION
+  flutter_localizations:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^1.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/placeholder.jpg
+

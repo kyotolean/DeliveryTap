@@ -1,0 +1,67 @@
+name: deliverytap_admin
+description: A new Flutter project.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.15.1 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  #Common
+  cupertino_icons: ^1.0.3
+  nb_utils: ^4.2.14
+  flutter_staggered_grid_view: ^0.4.0
+  http: ^0.13.3
+  mobx: ^2.0.1
+  flutter_mobx: ^2.0.0
+  intl: ^0.17.0
+  syncfusion_flutter_charts: ^19.1.67
+
+  # Firebase
+  firebase_core: ^1.2.0
+  cloud_firestore: ^2.2.0
+  firebase_auth: ^1.2.0
+  google_fonts: ^2.1.0
+  firebase_storage: ^8.1.0
+  paginate_firestore: ^1.0.0-nullsafety.1
+
+  # Vector Icons
+  flutter_vector_icons: ^1.0.0
+
+  # Cache Image
+  cached_network_image: ^3.0.0
+
+  # One Signal Push notification
+  onesignal_flutter: ^3.0.0-beta3
+  flutter_colorpicker: ^0.6.0
+
+  # others
+  url_strategy: ^0.2.0
+  js: ^0.6.3
+
+  #charts
+  fl_chart: ^0.36.1
+
+  flutter_localizations:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: ^2.0.4
+  mobx_codegen: ^2.0.1+3
+
+  flutter_lints: ^1.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - images/
+
