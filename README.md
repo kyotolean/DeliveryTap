@@ -2,9 +2,9 @@
 <h3 align="center">Delivery Tap is a new player in the market of buying and selling building materials</h3>
 
 ## Delivery Tap is a group of three applications:
-- App for an administrator
-- App for the courier.
-- App for an end customer.
+- **App for an administrator** > *deliverytap_admin*
+- **App for the courier** > *deliverytap_delivery*
+- **App for an end customer** > *deliverytap_user*
 
 ## Languages and Tools used in project:
 
