@@ -1,11 +1,9 @@
 <h1 align="center">Delivery Tap</h1>
 <h3 align="center">Delivery Tap is a new player in the market of buying and selling building materials</h3>
-
 ## Delivery Tap is a group of three applications:
 - App for an administrator
 - App for the courier.
 - App for an end customer.
-
 ## Languages and Tools used in project:
 <p align="left"> 
   <a href="https://flutter.dev/" target="_blank"> <img width="4%" src="https://user-images.githubusercontent.com/51419598/152648731-567997ec-ac1c-4a9c-a816-a1fb1882abbe.png"/> </a>
