@@ -13,7 +13,7 @@
 <img src="https://github.com/omataresu/DeliveryTap/blob/main/GITimages/DeliveryTap5.png?raw=true" align="center" alt="Logo" height=170/>
 <img src="https://github.com/omataresu/DeliveryTap/blob/main/GITimages/DeliveryTap6.png?raw=true" align="right" alt="Logo" height=170/>
 </p>
-</br>
+
 <h4 align="center">
 
   **App for an administrator** (only web version) **->** *deliverytap_admin*
