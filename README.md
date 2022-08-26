@@ -23,9 +23,9 @@
   **App for an end customer** (ios/android version) **->** *deliverytap_user*
 </h4>
 
+</br>
 
-
-<h2 align="center"><b>Languages and Tools used in project:</b> </h2>
+<h4 align="center"><b>Languages and Tools used in project:</b> </h4>
 <p align="center"> 
   <a href="https://flutter.dev/" target="_blank"> <img width="4%" src="https://user-images.githubusercontent.com/51419598/152648731-567997ec-ac1c-4a9c-a816-a1fb1882abbe.png"/>&nbsp; </a>
   <a href="https://dart.dev/" target="_blank"> <img width="4%"src="https://img.icons8.com/color/480/dart.png"/>&nbsp; </a>
