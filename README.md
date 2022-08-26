@@ -23,7 +23,7 @@
   **App for an end customer** (ios/android version) **->** *deliverytap_user*
 </h4>
 
-</br>
+
 <h1></h1>
 <h3 align="center"><b>Languages and Tools used in project:</b> </h3>
 <p align="center"> 
