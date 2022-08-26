@@ -9,9 +9,9 @@
 </h2>
 </br>
 <p align="center">
-<img src="https://github.com/omataresu/DeliveryTap/blob/main/GITimages/DeliveryTap4.png?raw=true" align="left" alt="Logo" height=100/>
-<img src="https://github.com/omataresu/DeliveryTap/blob/main/GITimages/DeliveryTap5.png?raw=true" align="center" alt="Logo" height=100/>
-<img src="https://github.com/omataresu/DeliveryTap/blob/main/GITimages/DeliveryTap6.png?raw=true" align="right" alt="Logo" height=100/>
+<img src="https://github.com/omataresu/DeliveryTap/blob/main/GITimages/DeliveryTap4.png?raw=true" align="left" alt="Logo" height=200/>
+<img src="https://github.com/omataresu/DeliveryTap/blob/main/GITimages/DeliveryTap5.png?raw=true" align="center" alt="Logo" height=200/>
+<img src="https://github.com/omataresu/DeliveryTap/blob/main/GITimages/DeliveryTap6.png?raw=true" align="right" alt="Logo" height=200/>
 </p>
 </br>
 <h3 align="center">
