@@ -14,17 +14,17 @@
 <img src="https://github.com/omataresu/DeliveryTap/blob/main/GITimages/DeliveryTap6.png?raw=true" align="right" alt="Logo" height=170/>
 </p>
 </br>
-<h3 align="center">
+<h4 align="center">
 
   **App for an administrator** (only web version) **->** *deliverytap_admin*
 
   **App for the courier** (ios/android version) **->** *deliverytap_delivery*
 
   **App for an end customer** (ios/android version) **->** *deliverytap_user*
-</h3>
+</h4>
 
 
-<h1></h1>
+
 <h2 align="center"><b>Languages and Tools used in project:</b> </h2>
 <p align="center"> 
   <a href="https://flutter.dev/" target="_blank"> <img width="4%" src="https://user-images.githubusercontent.com/51419598/152648731-567997ec-ac1c-4a9c-a816-a1fb1882abbe.png"/>&nbsp; </a>
